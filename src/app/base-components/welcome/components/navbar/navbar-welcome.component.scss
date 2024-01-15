@@ -1,0 +1,1102 @@
+
+$menuBreakpoint1:1280px;
+$menuBreakpoint2:1243px;
+$menuBreakpoint3:1024px;
+$menuBreakpoint4: 912px;
+$menuBreakpoint5:820px;
+$menuBreakpoint6:768px;
+$menuBreakpoint7:540px;
+$menuBreakpoint8:414px;
+$menuBreakpoint9:412px;
+$menuBreakpoint10:393px;
+$menuBreakpoint11:390px;
+$menuBreakpoint12:375px;
+$menuBreakpoint13:360px;
+$menuBreakpoint14:280px;
+
+.navbar{
+  width: 100%;
+  top: 0;
+  display: flex;
+  position: fixed;
+  background: #020024;
+  color: #FFF;
+  border: 0;
+  /*box-shadow: 0 1px 7px rgba(0, 0, 0, 1.0);*/
+
+  .logo{
+    padding: .7rem;
+    width: 20%;
+    display: flex;
+
+    img{
+      width: 80px;
+      height: 80px;
+      background-color: transparent;
+    }
+
+    h2{
+      margin-top: 4%;
+      margin-left: 8%;
+      background-color: transparent;
+      font-size: 2rem;
+      font-weight: 600;
+      text-shadow: 2px 4px 7px rgba(0,0,0,.23);
+
+      span{
+        color: #04ebf3;
+      }
+    }
+
+  }
+
+
+  .nav-links{
+   width: 80%;
+
+   .links{
+    width: 60%;
+    position: absolute;
+    padding: .4rem .6rem;
+    flex-direction: column;
+    top: 30%;
+    color: #fff;
+    background: transparent;
+    /*background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 4rem;*/
+    text-align: center;
+    //box-shadow: 0 1px 11px rgb(6, 6, 19);
+
+      ul{
+        list-style: none;
+        display: flex;
+        width: 100%;
+        background-color: transparent;
+
+        span{
+          width: 10%;
+          padding: .5rem 0;
+          margin-left: 1%;
+        }
+
+      }
+
+    }
+
+  }
+
+  .right-links{
+    text-align: right;
+    align-items: end;
+    width: 90%;
+
+    button{
+      margin-left: 1%;
+      cursor: pointer;
+    }
+
+    .social-network{
+      width: 35px;
+      padding: .2rem 0;
+      border: 1px solid #3a3a3a;
+      border-radius: 4rem;
+      -webkit-animation: jumpButton 5s infinite;
+      background: transparent;
+
+      i{
+        font-size: 1.1rem;
+        color: #FFF;
+        background-color: transparent;
+
+      }
+
+    }
+
+    .login{
+      width: 8%;
+      padding: .4rem;
+      border: none;
+      background: transparent;
+      box-shadow: 0 1px 7px rgba(0,0,0,.23);
+      color: #FFF;
+
+    }
+
+    #request{
+      margin: 1%;
+      padding: .8rem;
+      width: 13%;
+      color: #d8d8d8;
+      font-size: .7rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: rgba(19, 19, 19, .17);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(1, 75, 90) 100%);
+      border: 1px solid #297c4e;
+      border-radius: 1rem 1rem 0;
+      box-shadow: 0 1px 7px #297c4e;
+      text-transform: uppercase;
+    }
+
+  }
+
+}
+
+.menu-responsive{
+  display: none;
+  width: 60%;
+  text-align: right;
+  cursor: pointer;
+
+  i{
+    font-size: 3rem;
+    margin-right: 5%;
+  }
+}
+
+.i-menu-open{
+  transition: all .3s linear;
+}
+
+.navbar_change{
+  width: 100%;
+  top: 0;
+  display: flex;
+  position: fixed;
+  background: #020024;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(10, 10, 43) 40%, rgba(0,212,255,1) 100%);
+  color: #FFF;
+  border-bottom: 1px solid #d8d8d8;
+  transition: all .4s ease;
+
+}
+
+
+.navbar .nav-links .nav_links_change{
+  background-color: transparent;
+}
+
+
+@keyframes jumpButton {
+  0%{
+    transform: scale(1,1) translate(0px, 0px);
+  }
+
+  30%{
+    transform: scale(1,.9) translate(0px, 10px);
+  }
+
+  75%{
+    transform: scale(1,1.1) translate(0px, -7px);
+  }
+
+  100%{
+    transform: scale(1,1) translate(0px, 0px);
+  }
+}
+
+
+
+
+.navbar .nav-links .links ul span, li, a {
+  background-color: transparent;
+}
+
+.navbar .nav-links .links ul span li a{
+  padding: .5rem;
+  flex-wrap: wrap;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFF;
+
+}
+
+.navbar .nav-links .links ul span li a:hover{
+  border-bottom: #1e2e88 3px solid;
+  border-radius: 1rem;
+  margin-left: 3%;
+  transition: all .3s linear;
+}
+
+.navbar .nav-links .right-links button:hover{
+  border: 1px solid #297c4e;
+  box-shadow: 0 1px 7px #297c4e;
+  border-radius: 4rem;
+}
+
+.navbar .nav-links .right-links .login:hover{
+  border: 1px solid #297c4e;
+  box-shadow: 0 1px 7px #297c4e;
+  border-radius: 4rem;
+}
+
+.navbar .nav-links .right-links #request:hover{
+  border: 1px solid #f8f8f8;
+  box-shadow: 0 1px 7px #297c4e;
+  font-size: .8rem;
+}
+
+.active{
+  border-bottom: #1e2e88 3px solid;
+  border-radius: 1rem;
+  margin-left: 3%;
+  transition: all .3s linear;
+}
+
+
+/* Responsive Styles */
+
+/*-------------- Menu breakpoint with 1280 -----------------------*/
+
+@media screen and (max-width: $menuBreakpoint1) {
+  .navbar{
+
+    .nav-links .links{
+
+      ul{
+
+        span{
+          width: 15%;
+        }
+      }
+
+    }
+
+
+  }
+
+  .right-links{
+
+    #request{
+      width: 20%;
+    }
+
+  }
+
+
+}
+
+/*-------------- Menu breakpoint with 1243 -----------------------*/
+
+@media screen and (max-width: $menuBreakpoint2) {
+  .navbar{
+
+    .nav-links .links{
+
+      ul{
+
+        span{
+          width: 15%;
+        }
+      }
+
+    }
+
+
+  }
+
+  #request{
+    width: 17%;
+  }
+
+}
+
+/*-------------- Menu breakpoint with 1024 -----------------------*/
+
+@media screen and (max-width: $menuBreakpoint3) {
+  .navbar{
+
+    .nav-links .links{
+
+      ul{
+
+        span{
+          width: 17%;
+        }
+      }
+
+    }
+
+
+  }
+
+  #request{
+    width: 17%;
+  }
+
+}
+
+/*-------------- Menu breakpoint with 912 -----------------------*/
+
+@media screen and (max-width: $menuBreakpoint4) {
+
+  .menu-responsive{
+    display:block;
+  }
+
+  .navbar .logo{
+    width: 50%;
+  }
+
+  .navbar .logo h2{
+    font-size: 1.6rem;
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 10%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 30%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: 1.3rem;
+  }
+
+  .navbar .nav-links .right-links{
+    width: 90%;
+    display: flex;
+    margin-top: 3%;
+    text-align: left;
+    background-color: transparent;
+  }
+
+  .navbar .nav-links .right-links button{
+    width: 40%;
+    font-size: 1.4rem;
+  }
+
+  .navbar .nav-links .right-links #request{
+    width: 70%;
+    font-size: 1.1rem;
+  }
+
+}
+
+/*-------------- Menu breakpoint with 820 -----------------------*/
+
+@media screen and (max-width: $menuBreakpoint5) {
+  .menu-responsive{
+    display:block;
+
+    i{
+      font-size: 2.4rem;
+    }
+  }
+
+  .navbar .logo{
+    width: 50%;
+  }
+
+  .navbar .logo h2{
+    font-size: 1.6rem;
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 10%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 30%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: 1rem;
+  }
+
+  .navbar{
+
+    .nav-links{
+
+      .right-links{
+        width: 90%;
+        display: flex;
+        margin-top: 3%;
+        text-align: left;
+        background-color: transparent;
+
+        button{
+          width: 50%;
+          font-size: .8rem;
+        }
+
+        #request{
+          width: 70%;
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+
+}
+
+/*-------------- Menu breakpoint with 768 -----------------------*/
+@media screen and (max-width: $menuBreakpoint6) {
+  .menu-responsive{
+    display:block;
+
+    i{
+      font-size: 2.4rem;
+    }
+  }
+
+  .navbar .logo{
+    width: 50%;
+  }
+
+  .navbar .logo h2{
+    font-size: 1.6rem;
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 10%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 30%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: 1rem;
+  }
+
+  .navbar{
+
+    .nav-links{
+
+      .right-links{
+        width: 90%;
+        display: flex;
+        margin-top: 3%;
+        text-align: left;
+        background-color: transparent;
+
+        button{
+          width: 50%;
+          font-size: .8rem;
+        }
+
+        #request{
+          width: 70%;
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}
+
+/*-------------- Menu breakpoint with 540 -----------------------*/
+@media screen and (max-width: $menuBreakpoint7) {
+  .menu-responsive{
+    display:block;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .navbar .logo{
+    width: 50%;
+  }
+
+  .navbar .logo img{
+    margin-top: -5%;
+  }
+
+  .navbar .logo h2{
+    font-size: 1.1rem;
+
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 15%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 40%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: .9rem;
+  }
+
+  .navbar .nav-links .right-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .navbar .nav-links .right-links button, #request{
+    width: 60%;
+    font-size: .8rem;
+  }
+}
+
+/*-------------- Menu breakpoint with 413 -----------------------*/
+@media screen and (max-width: $menuBreakpoint8) {
+  .menu-responsive{
+    display:block;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .navbar .logo{
+    width: 50%;
+  }
+
+  .navbar .logo img{
+    margin-top: -5%;
+  }
+
+  .navbar .logo h2{
+    font-size: 1.1rem;
+
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 15%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul{
+    display: block;
+    flex-direction: column;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 40%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: .9rem;
+  }
+
+  .navbar .nav-links .right-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .navbar .nav-links .right-links button, #request{
+    width: 60%;
+    font-size: .8rem;
+  }
+}
+
+/*-------------- Menu breakpoint with 412 -----------------------*/
+@media screen and (max-width: $menuBreakpoint9) {
+  .menu-responsive{
+    display:block;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .navbar{
+
+    .logo{
+      width: 50%;
+
+      img{
+        margin-top: -5%;
+
+        h2{
+          font-size: 1.1rem;
+
+        }
+
+      }
+    }
+
+    .nav-links{
+      display: none;
+      margin-left: -30%;
+
+      .links{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: static;
+        margin-top: 2%;
+
+        ul{
+          display: block;
+          flex-direction: column;
+        }
+
+      }
+
+    }
+
+  }
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 15%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links ul span{
+    width: 40%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: .9rem;
+  }
+
+  .navbar .nav-links .right-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .navbar .nav-links .right-links button{
+    width: 70%;
+    font-size: .8rem;
+  }
+
+  .navbar .nav-links .right-links #request{
+    width: 70%;
+    font-size: .8rem;
+  }
+}
+
+
+
+/*-------------- Menu breakpoint with 390 -----------------------*/
+@media screen and (max-width: $menuBreakpoint11) {
+  .menu-responsive{
+    display:block;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .navbar .logo{
+    width: 60%;
+  }
+
+  .navbar .logo img{
+    margin-top: -5%;
+  }
+
+  .navbar .logo h2{
+    font-size: 1.1rem;
+
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 15%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul{
+    display: block;
+    flex-direction: column;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 40%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: .9rem;
+  }
+
+  .navbar .nav-links .right-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .navbar .nav-links .right-links button, #request{
+    width: 60%;
+    font-size: .8rem;
+  }
+}
+
+
+/*-------------- Menu breakpoint with 375 -----------------------*/
+@media screen and (max-width: $menuBreakpoint12) {
+  .menu-responsive{
+    display:block;
+    transition: .2s linear;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .navbar .logo{
+    width: 60%;
+  }
+
+  .navbar .logo img{
+    margin-top: -5%;
+  }
+
+  .navbar .logo h2{
+    font-size: 1.1rem;
+
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 15%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul{
+    display: block;
+    flex-direction: column;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 40%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: .9rem;
+  }
+
+  .navbar .nav-links .right-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .navbar .nav-links .right-links button, #request{
+    width: 60%;
+    font-size: .8rem;
+  }
+}
+
+/*-------------- Menu breakpoint with 280 -----------------------*/
+@media screen and (max-width: $menuBreakpoint14) {
+  .menu-responsive{
+    display:block;
+
+    i{
+      font-size: 1.6rem;
+    }
+  }
+
+  .navbar .logo{
+    width: 60%;
+  }
+
+  .navbar .logo img{
+    width: 60px;
+    height: 60px;
+    margin-top: -11%;
+  }
+
+  .navbar .logo h2{
+    font-size: .8rem;
+    margin-top: -5%;
+  }
+
+  .navbar .nav-links{
+    display: none;
+    margin-left: -30%;
+  }
+
+  .navbar .is-menu-open{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #1e2e88;
+    background-color: #10173b;
+    margin-top: 15%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    transition: all .3s linear;
+  }
+
+  .mobile_menu{
+    display: flex;
+  }
+
+
+  .navbar .nav-links .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    margin-top: 2%;
+  }
+
+  .navbar .nav-links .links ul{
+    display: block;
+    flex-direction: column;
+  }
+
+  .navbar .nav-links .links ul span{
+    width: 40%;
+  }
+
+  .navbar .nav-links .links ul span li a{
+    font-size: .9rem;
+  }
+
+  .navbar .nav-links .right-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .navbar .nav-links .right-links button, #request{
+    width: 60%;
+    font-size: .8rem;
+  }
+}
+
+
+
+

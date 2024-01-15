@@ -1,0 +1,3489 @@
+
+//@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Dosis:wght@200;300;700;800&family=Fredericka+the+Great&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Public+Sans:ital,wght@1,100;1,200;1,800;1,900&family=Rubik+Moonrocks&family=Tektur:wght@400;600;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Dosis:wght@200;300;700;800&family=Fredericka+the+Great&family=IBM+Plex+Mono:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Public+Sans:ital,wght@1,100;1,200;1,800;1,900&family=Rubik+Moonrocks&family=Tektur:wght@400;600;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@500;600&family=Dosis:wght@200;300;700;800&family=Fredericka+the+Great&family=IBM+Plex+Mono:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Orbitron:wght@600;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Public+Sans:ital,wght@1,100;1,200;1,800;1,900&family=Rubik+Moonrocks&family=Tektur:wght@400;600;800;900&display=swap');
+
+
+$menuBreakpoint1:1280px;
+$menuBreakpoint2:1243px;
+$menuBreakpoint3:1024px;
+$menuBreakpoint4: 912px;
+$menuBreakpoint5:820px;
+$menuBreakpoint6:768px;
+$menuBreakpoint7:540px;
+$menuBreakpoint8:414px;
+$menuBreakpoint9:412px;
+$menuBreakpoint10:393px;
+$menuBreakpoint11:390px;
+$menuBreakpoint12:375px;
+$menuBreakpoint13:360px;
+$menuBreakpoint14:280px;
+
+@keyframes fade-in-right {
+  from{
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to{
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow-left{
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+
+:root{
+  --white: #FFF;
+  --background-button: #26a0a0;
+  --backgroung-gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(1, 75, 90) 100%);
+}
+
+
+/* ------------ Header */
+
+  .header{
+    padding: 2rem 0;
+    margin-top: 4%;
+    align-items: center;
+    justify-content: center;
+    //background: rgb(25,143,167);
+    background: rgba(2,0,36,1);
+    //background: radial-gradient(circle, rgba(25,143,167,0.9948354341736695) 0%, rgba(2,0,36,1) 40%);
+    /*background-image: url("../../../assets/img/wallpaperflare-com_wallpaper02.jpg"), url("../../../assets/img/wallpaperflare-com_wallpaper02.jpg");
+    background: rgb(2,0,36);
+    */
+
+    svg{
+      margin: 0;
+      margin-bottom: -3%;
+      position: static;
+    }
+
+    header{
+      background-color: transparent;
+      margin-top: 7%;
+
+      .header-body{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: transparent;
+
+        .welcome{
+          width: 40%;
+          padding: 2rem;
+          margin-left: 10%;
+          /*background: linear-gradient(
+            90deg,
+            transparent 16%,
+            rgba(1, 8, 12, 0.5),
+            rgba(9, 24, 58, 0.5)
+          );*/
+          background-size: cover;
+          border-radius: .5rem .5rem;
+
+
+
+          h1{
+            color: #FFF;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 9%;
+            background-color: transparent;
+
+
+            span{
+              color: #2fccb2;
+
+              background-color: transparent;
+
+              span{
+                color: #FFF;
+                box-shadow: 0 0 0;
+                //font-family: 'Dancing Script', cursive;
+                background-color: transparent;
+              }
+            }
+          }
+
+          h2{
+            font-size: 2.5rem;
+            color: #dadada;
+            margin-bottom: 4%;
+            background-color: transparent;
+
+            span{
+              color: #2fccb2;
+            }
+          }
+
+          p{
+            //font-family: 'Dancing Script', cursive;
+            color: #f3f3f3;
+            font-size: 1.5rem;
+            margin-bottom: 9%;
+
+          }
+
+          .btn-learn-more{
+            padding: 1.3rem 3rem;
+            font-size: 1.3rem;
+            background-color: #2fccb2;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(1, 75, 90) 100%);
+            color: #ffffff;
+            border-radius: .2rem;
+            cursor: pointer;
+          }
+
+
+        }
+
+
+        .editor-card{
+          width: 40%;
+          margin-left: 6%;
+          padding: 2rem 0;
+          /*background: linear-gradient(
+            90deg,
+            transparent 50%,
+            rgba(49, 179, 255, 0.5),
+            rgb(39, 92, 207)
+          );*/
+          background: linear-gradient(45deg, #b8b8b7 25%, transparent 25%), linear-gradient(-45deg, #b8b8b7 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #b8b8b7 75%), linear-gradient(-45deg, transparent 75%, #b8b8b7 75%);
+          background-size: 5px 5px;
+          background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+          //border: 1px solid #FFF;
+          //border-radius: 25rem 0;
+
+          .back-card{
+            width: 40%;
+            height: 60%;
+            margin: 3%;
+            margin-left: 10%;
+            background-color: #FFF;
+
+            .editor{
+              width: 100%;
+              height: 100%;
+
+              margin-left: 2%;
+              margin-top: 2%;
+              border: 1px solid #000;
+
+              .editor-topbar{
+                width: 100%;
+                height: 30px;
+                background-color: #00c6f2;
+
+                h2{
+                  font-size: 1rem;
+                  margin-left: 3%;
+                }
+              }
+
+              .editor-body{
+                background: #202124;
+                height: 90%;
+
+
+                .box-code{
+                  width: 80%;
+                  padding: .5rem .6rem;
+                  //background-color: #18191b;
+                  //background: linear-gradient(90deg, rgb(16, 16, 22) 0%, rgb(18, 18, 32) 35%, transparent 100%);
+
+                  //border-radius: 2rem 0 6rem 2rem;
+                  //box-shadow: 0 1px 7px rgba(0, 0, 0, .33);
+                  color: #FFF;
+                  text-align: left;
+                  transition: all .3s ease;
+
+
+                  span{
+                    color: #7e7e7e;
+
+                    #code{
+                      color: #c4c4c4;
+                      font-size: .7rem;
+                    }
+                  }
+                }
+
+
+              }
+
+            }
+
+          }
+
+          h3{
+            color: #ffffff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 7px rgba(0, 0, 0, .23);
+            margin-left: 10%;
+            margin-top: 5%;
+            font-family: 'Nunito', sans-serif;
+
+
+            span{
+              color: #00c6f2;
+            }
+          }
+
+
+          .text{
+            background-color: transparent;
+            color: #FFF;
+            text-transform: uppercase;
+            margin-top: 10%;
+
+            h2{
+              font-size: 2.5rem;
+              background: transparent;
+              font-weight: 700;
+              text-shadow: 2px 5px 4px #000000;
+              font-family: 'Dosis', sans-serif;
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /*.animate{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background-color: transparent;
+
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      height: 100%;
+      z-index: 1;
+
+    }
+
+    &::before{
+      background-color: #000000;
+      animation: showText .8s ease;
+    }
+
+    &::after{
+      background: linear-gradient(
+        90deg,
+        transparent 4%,
+        rgba(1, 8, 12, 0.5),
+        rgb(6, 156, 161)
+      );
+      animation-delay: 0.5s;
+      animation: showText .8s ease;
+    }
+
+    h1{
+      opacity: 1;
+      //animation: animateText .7s forwards;
+    }
+  }*/
+
+  @keyframes animateText{
+    from{
+      opacity: 0;
+    }
+
+    to{
+      opacity: 1;
+    }
+  }
+
+  @keyframes showText{
+    0%{
+      width: 0;
+      left: 0;
+    }
+    50%{
+      width: 100%;
+      left: 0;
+    }
+    100%{
+      width: 0;
+      left: 100%;
+    }
+  }
+
+  .btn-learn-more:hover{
+    padding: 3rem;
+    border: 1px solid #555555;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+    transition: all .3s ease;
+  }
+
+  .auto-write-section{
+    padding: 2rem;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url("../../../assets/img/wave.svg");
+
+    .box-code{
+      width: 40%;
+      padding: .5rem .6rem;
+      background-color: #18191b;
+      border: 1px solid #282a2c;
+      border-radius: 2rem;
+      box-shadow: 0 1px 7px rgba(0, 0, 0, .33);
+      color: #FFF;
+      text-align: left;
+
+
+      span{
+        color: #7e7e7e;
+
+        #code{
+          color: #a1a1a1;
+
+        }
+      }
+    }
+
+  }
+
+  .services-section{
+    padding: 2.2rem 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url("../../../assets/img/wave-04.svg") ;
+    background-attachment:local;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .box-card{
+      width: 100%;
+      padding: 2rem .6rem;
+      display: flex;
+      position: static;
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background-color: linear-gradient(90deg, rgba(177, 169, 86, 0.233) 90%, rgba(179, 166, 25, 0.233) 70%, transparent);
+
+
+      .card{
+        padding: .5rem 1rem;
+        max-width: 25%;
+        margin-left: 7%;
+        border-radius: 0;
+        background-color: rgb(6, 202, 216);
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.33);
+        animation: card_animation 20s linear infinite;
+        animation-duration: 5;
+
+        .title{
+          padding: .6rem 1rem;
+          border-radius: 2rem;
+          background-color: #0F132A;
+          margin-top: 1%;
+          margin-bottom: 1%;
+          color: #FFF;
+        }
+
+        .image{
+          display: flex;
+          background-color: transparent;
+
+          img{
+            max-width: 220px;
+            height: 150px;
+            background-color: transparent;
+          }
+
+          p{
+            margin-top: 10%;
+            font-size: 1rem;
+            color: #fdfdfd;
+            font-weight: 600;
+          }
+        }
+
+        .buttons{
+          display: flex;
+          background-color: transparent;
+          color: #010213;
+          border-top: 2px dotted #3bad9a;
+          border-left: 2px dotted #3bad9a;
+          border-bottom: 2px dotted #3bad9a;
+          text-align: right;
+          box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.33);
+
+          .number{
+            padding: .6rem .9rem;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            border-radius: 4rem;
+            background-color: #000;
+            color: #FFF;
+            margin-left: 1%;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.33);
+
+            span{
+              border: 2px dotted #1f201f;
+              border-radius: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .services-section .box-card .card:hover{
+    border-radius: 0 0 2rem 2rem;
+  }
+
+
+  .technologies-section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 0;
+    margin: 0;
+    top: 0;
+    background-color: #0F123B;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      position: static;
+      width: 100%;
+      background-color: transparent;
+      color: #5a5a5a;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      .card{
+        max-width: 20%;
+        padding: .3rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: justify;
+        background-color: transparent;
+        border-radius: 1rem;
+        margin: 0.5%;
+        box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+
+
+        .head{
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 2%;
+
+          img{
+              width: 50px;
+              height: 50px;
+              margin-top: 2%;
+          }
+
+          .title{
+            width: 50%;
+            font-size: .8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-left: 2%;
+            margin-top: 5%;
+            color: #FFF;
+          }
+
+        }
+
+        .content{
+          p{
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+  /* ------- Course section start css --------- */
+
+  .courses-section{
+    margin-bottom: 3%;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f123b;
+
+    h2{
+      color: #FFF;
+      font-size: 2rem;
+      margin: 2%;
+      background-color: transparent;
+    }
+
+    .mat-divider{
+      color: #FFF;
+    }
+
+    .card-box{
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 1%;
+      width: 40%;
+      justify-content: center;
+      background-color: transparent;
+      border-top: 1px solid #27ecec;
+      border-right: 1px solid #27ecec;
+
+      h2{
+        margin: 0;
+        margin-bottom: 3%;
+        font-size: 2rem;
+        font-weight: 600;
+        color: rgb(32, 183, 243);
+        text-decoration: underline;
+      }
+
+      .content{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+
+        .titles{
+          display: flex;
+          flex-direction: column;
+          background-color: transparent;
+
+          h3{
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #179983;
+
+            span{
+              font-size: 1.7rem;
+              font-weight: bold;
+              color: #179983;
+            }
+          }
+
+          .items{
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            margin-top: 4%;
+
+            span{
+              font-size: 1.2rem;
+              font-weight: 500;
+              color: #FFF;
+              margin-bottom: 2%;
+              margin-left: 2%;
+
+              i{
+                color: #17c8e7;
+              }
+            }
+
+          }
+
+        }
+
+        .box{
+          padding: .3rem .5rem;
+          width: 220px;
+          height: 130px;
+          display: flex;
+          position: absolute;
+          margin-top: -2%;
+          margin-left: 25%;
+          flex-direction: column;
+          background-color: rgba(7, 133, 64, 0.234);
+          border: 0;
+          border-radius: 0;
+          box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+          color: #FFF;
+          /*-webkit-clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+                  clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);*/
+
+
+          .flutuant-text{
+            display: flex;
+            flex-direction: column;
+            margin-top: -10%;
+            margin-left: -10%;
+            text-align: justify;
+            text-transform: none;
+            background-color: rgba(4, 201, 92, 0.234);
+            border-radius: .2rem;
+            box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+
+            h2{
+              margin: 0;
+              margin-left: 2%;
+              font-size: 1.2rem;
+              text-decoration: none;
+            }
+          }
+
+          .bar{
+            padding: .2rem;
+            border: 1px solid #333;
+            border-radius: .3rem;
+            background-color: #161616;
+            color: #045ee6;
+            margin-top: 15%;
+            font-size: .6rem;
+          }
+
+        }
+
+        button{
+          width: 270px;
+          padding: 1.5rem 4rem;
+          font-size: 1.1rem;
+          background-color: #26a0a0;
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(1, 75, 90) 100%);
+          color: #ffffff;
+          border-radius: .2rem;
+          cursor: pointer;
+          margin-top: 5%;
+          margin-bottom: 5%;
+        }
+
+      }
+
+      .container{
+        display: flex;
+        background-color: rgba(6, 20, 41, 0.333);
+        border-radius: 0 1rem 1rem 0;
+        box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+
+        .side-line{
+          width: 10%;
+          height: 335px;
+          display: flex;
+          flex-direction: column;
+          background-color: #181616;
+          text-align: center;
+
+          span{
+            color: #27ecec;
+            margin-top:10%;
+          }
+
+          .mat-divider{
+            margin-bottom: 10%;
+          }
+
+          button{
+            background-color: transparent;
+            margin-bottom: 2%;
+            cursor: pointer;
+
+            i{
+              color: #FFF;
+            }
+          }
+        }
+
+        .body{
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+
+          .top-bar{
+            width: 99%;
+            height: 40px;
+            padding: .4rem .4rem;
+            margin-left: 1%;
+            background-color: #9c9e04;
+            border-radius: 0 1rem 0 0;
+
+            div{
+              width: 50%;
+              border-radius: 2rem;
+              background-color: #FFF;
+
+              h3{
+                color: #181818;
+                font-weight: 600;
+                font-size: 1.1rem;
+                margin-left: 2%;
+                margin-bottom: 2%;
+              }
+            }
+
+          }
+
+          .main{
+            width: 99%;
+            height: 150px;
+            padding: .2rem .1rem;
+            margin-left: 1%;
+            margin-top: 1%;
+            background-color: transparent;
+
+            .card-course{
+              width: 60%;
+              padding: .2rem .5rem;
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              background-color: #000000;
+              border: 1px solid #FFF;
+              border-radius: .3rem;
+              box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+              margin-left: 10%;
+              margin-top: 1%;
+
+              .box{
+                display: flex;
+
+
+                div{
+                  display: flex;
+                  flex-direction: column;
+
+                  .title{
+                    font-size: 1rem;
+                    text-decoration: none;
+
+                  }
+
+                  .details{
+                    font-size: .8rem;
+                    color: #FFF;
+                  }
+                }
+
+
+                .btn-enroll{
+                  width: 68px;
+                  height: 65px;
+                  position: static;
+                  padding: .2rem .7rem;
+                  background-color: #FFF;
+                  border-radius: 5rem;
+                  margin-top: 5%;
+                  box-shadow: 0 2px 7px rgba(0, 0, 0, .23);
+                  cursor: pointer;
+                  font-size: 1rem;
+
+                }
+
+              }
+
+
+              .box .btn-enroll:hover{
+                background-color: #17c8e7;
+                transition: all .5s ease;
+                color: #FFF;
+                font-weight: bold;
+              }
+
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  .courses-section .card-box .btn-enroll:hover{
+    background-color: #1d2241;
+    transition: all .5s ease;
+
+  }
+
+  /* ------- Course section end css --------- */
+
+
+/*}*/
+
+ /* ------- Services section start css --------- */
+
+@keyframes card_animation {
+  10% { background-color: rgba(8, 25, 63, 0.222); border: 1px solid #27ecec; border-radius: .7rem 0 1.5rem 0; transition: all .1s linear;}
+  40% { background-color: rgba(6, 216, 181, 0.222); border-radius: 1.7rem 0 1.6rem 0; transition: all .2s ease;}
+  100% { background-color: rgba(32, 116, 243, 0.333); border-radius: .5rem 0 1rem 0; transition: all .2s ease;}
+}
+
+
+
+
+
+   /* ------- Sevices section end css --------- */
+
+
+.box, .item-top,
+.item-bottom, span,
+p, i {
+  background-color: transparent;
+}
+
+
+
+.job-section{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: transparent;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  .container{
+    /*padding: 2rem 0;*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: transparent;
+    color: #8f8f8f;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    .box-image{
+
+      max-width: 50%;
+      /*padding: 1rem 2rem;*/
+      background-color: transparent;
+
+      img{
+        width: 500px;
+        height: 300px;
+        border-radius: 10rem;
+        box-shadow: 0 px 1px 7px rgba(0, 0, 0, .33);
+      }
+    }
+
+    .box{
+      max-width: 30%;
+      padding: 1rem 2rem;
+      box-shadow: 0 px 1px 7px rgba(0, 0, 0, .23);
+      border: 1px solid #FFF;
+      margin-left: 5%;
+      background-color: transparent;
+
+      h2{
+        font-size: 3rem;
+        color: #e0a606;
+        background-color: transparent;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px #000000;
+      }
+
+
+      div{
+        background-color: transparent;
+
+        h3{
+          font-size:  2rem;
+          font-weight: 600;
+          background-color: transparent;
+          color: #4d4c4c;
+
+          span{
+            color: #17c8e7;
+            background-color: transparent;
+          }
+        }
+
+        p{
+          font-size: 1.2rem;
+          color: #111111;
+        }
+
+        button{
+          padding: 1rem 3rem;
+          color: #FFF;
+          font-size: 1rem;
+          font-weight: 600;
+          background-color: #26a0a0;
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(1, 75, 90) 100%);
+          border-radius: 2rem;
+          cursor: pointer;
+          box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+        }
+      }
+    }
+  }
+  h1{
+    color: #FFF;
+    font-family: 'Dosis', sans-serif;
+    background-color: transparent;
+
+  }
+
+}
+
+.website-service-section{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position:static;
+    top: 0;
+    transition: all .5s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #020024;
+
+    //background: url("../../../assets/img/wallpaperflare.com_wallpaper-_1_.webp");
+
+    .container{
+      padding: 2rem 1rem;
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(45deg, #02123b 25%, transparent 25%), linear-gradient(-45deg, #272727 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #0f0a58 75%), linear-gradient(-45deg, transparent 75%, #0f0a58 75%);
+    background-size: 15px 15px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      //background: linear-gradient(90deg, rgb(16, 16, 22) 0%, rgb(18, 18, 32) 35%, transparent 100%);
+      margin-top: 5%;
+
+      .details{
+        padding: 1rem .4rem;
+        max-width: 70%;
+        color: #FFF;
+        background-color: transparent;
+        border: 2px dotted #222222;
+
+        h2{
+          font-size: 2rem;
+          background-color: transparent;
+
+          span{
+            background-color: transparent;
+            color: #ec5e0c;
+            font-size: 2rem;
+          }
+        }
+
+        span{
+          font-size: 1.4rem;
+          color: #c9c9c9;
+        }
+
+        p{
+          font-size: 1rem;
+          color: #c9c9c9;
+        }
+      }
+
+      .button{
+        width: 30%;
+        text-align: center;
+        background-color: transparent;
+
+        .btn-request{
+          padding: 1rem 2rem;
+          background-color: #26a0a0;
+          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(1, 75, 90) 100%);
+          color: #FFF;
+          box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+          cursor: pointer;
+          font-size: 1rem;
+        }
+
+      }
+
+    }
+
+
+}
+
+.website-service-section .container .button .btn-request:hover{
+  margin-top: 9%;
+  font-size: 1.2rem;
+}
+
+
+.youtube-section{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 4rem 0;
+  background: #FFF;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  .container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    .box-video{
+      max-width: 50%;
+      background-color: transparent;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      iframe{
+        max-width: 550px;
+        height: 360px;
+        border: 4px solid #0f123b;
+        background-color: #FFF;
+        box-shadow: 2px 1px 7px rgba(0, 0, 0, .23);
+
+      }
+
+    }
+
+    .team{
+
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border-bottom: 3px solid #000;
+      margin-left: 10%;
+      border-radius: 30rem;
+      box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+
+      .image{
+        background-color: transparent;
+
+        img{
+          width: 115px;
+          height: 135px;
+          background-color: transparent;
+          border-radius: 15rem;
+        }
+
+      }
+
+      #name{
+        //font-family: 'Dancing Script', cursive;
+        font-size: .7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #c00381;
+      }
+
+      #profission{
+        //font-family: 'Dancing Script', cursive;
+        font-size: .6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #161616;
+      }
+
+      #btn-portfolio{
+        width: 15%;
+        color: #dedfe7;
+        font-size: .9rem;
+        font-weight: 600;
+        background-color: #020733;
+        border: 1px solid #000;
+        border-radius: 4rem;
+        margin-top: 2%;
+        margin-bottom: 5%;
+        cursor: pointer;
+        transition: all .3s ease;
+        text-decoration: none;
+        box-shadow: 0 1px 7px rgba(0, 0, 0, .23);
+      }
+
+    }
+  }
+}
+
+
+
+
+/* ------------------   Reponsive CSS
+*/
+
+/* --------------- Menu Breakpoint of 1280px ---------------------*/
+@media screen and (max-width: $menuBreakpoint1) {
+
+
+
+  /* ------------ Header */
+    .header{
+
+      header{
+
+        .header-body {
+
+          .welcome{
+            width: 40%;
+
+            h1{
+              color: #FFF;
+              font-size: 1.8rem;
+
+            }
+
+            h2{
+              font-size: 1.3rem;
+            }
+
+            p{
+              font-size: 1rem;
+              margin-bottom: 9%;
+            }
+
+            .btn-learn-more{
+              padding: 1rem 3rem;
+              font-size: 1rem;
+            }
+
+          }
+
+          .editor-card{
+            width: 35%;
+            margin: 0;
+
+            .back-card{
+              width: 80%;
+              margin: 1;
+              align-items: center;
+              text-align: center;
+
+              .editor{
+                align-items: center;
+                text-align: center;
+
+              }
+            }
+
+          }
+
+        }
+
+      }
+    }
+
+
+  .services-section {
+
+    .box-card {
+      .card{
+        max-width: 40%;
+
+        .image{
+
+          img{
+            width: 200px;
+            height: 150px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+
+  .technologies-section{
+
+    .container{
+
+      .card{
+
+      }
+    }
+  }
+
+//-------- Courses CSS
+
+  .courses-section{
+
+    .card-box{
+      width: 40%;
+
+      .content{
+
+        .box{
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+
+        }
+
+        .body{
+
+          .top-bar{
+
+            div{
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* --------------- Menu Breakpoint of 1243px ---------------------*/
+@media screen and (max-width: $menuBreakpoint2) {
+
+
+  /* ------------ Header */
+
+    .header-body {
+      .welcome{
+        width: 40%;
+
+        h1{
+          color: #FFF;
+          font-size: 2rem;
+
+        }
+
+        h2{
+          font-size: 1.5rem;
+        }
+
+        p{
+          font-size: 1rem;
+          margin-bottom: 9%;
+        }
+
+        .btn-learn-more{
+          padding: 1rem 3rem;
+          font-size: 1rem;
+        }
+
+      }
+    }
+
+
+    .editor-card{
+      width: 30%;
+      margin: 0;
+
+      .back-card{
+        width: 80%;
+        margin: 1;
+        align-items: center;
+        text-align: center;
+
+        .editor{
+          align-items: center;
+          text-align: center;
+
+        }
+      }
+
+    }
+
+
+}
+
+/* --------------- Menu Breakpoint of 1024px ---------------------*/
+@media screen and (max-width: $menuBreakpoint3) {
+
+
+  /* ------------ Header */
+
+    .header{
+
+      header{
+
+        .header-body {
+
+          .welcome{
+            width: 40%;
+
+            h1{
+              color: #FFF;
+              font-size: 1.8rem;
+
+            }
+
+            h2{
+              font-size: 1.3rem;
+            }
+
+            p{
+              font-size: 1rem;
+              margin-bottom: 9%;
+            }
+
+            .btn-learn-more{
+              padding: 1rem 3rem;
+              font-size: 1rem;
+            }
+
+          }
+
+          .editor-card{
+            width: 35%;
+            margin: 0;
+
+            .back-card{
+              width: 80%;
+              margin: 1;
+              align-items: center;
+              text-align: center;
+
+              .editor{
+                align-items: center;
+                text-align: center;
+
+              }
+            }
+
+          }
+
+        }
+
+      }
+    }
+
+
+    .services-section {
+
+      .box-card {
+        .card{
+          max-width: 40%;
+
+          .image{
+
+            img{
+              width: 200px;
+              height: 150px;
+            }
+          }
+
+        }
+      }
+
+    }
+
+
+    .technologies-section{
+
+      .container{
+
+        .card{
+
+        }
+      }
+    }
+
+  //-------- Courses CSS
+
+    .courses-section{
+
+      .card-box{
+        width: 60%;
+
+        .content{
+
+          .box{
+            position: static;
+            margin-top: 10%;
+            margin-left: 0%;
+
+          }
+
+          button{
+            width: 200px;
+            padding: 1.5rem 2rem;
+          }
+
+        }
+
+        .container{
+
+          .side-line{
+
+          }
+
+          .body{
+
+            .top-bar{
+
+              div{
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  //---------------- JOb-Sect ion CSS
+
+    .job-section{
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .job-section .container .box-image{
+      max-width: 70%;
+
+      img{
+        width: 300px;
+        height: 200px;
+      }
+    }
+
+    .job-section .container .box{
+      max-width: 70%;
+
+      h2{
+        font-size: 1.5rem;
+      }
+
+      div p{
+
+      }
+
+      div button{
+        width: 200px;
+        font-size: 1rem;
+      }
+
+    }
+
+    .website-service-section .container .details{
+      max-width: 60%;
+    }
+
+    .website-service-section .container .button{
+      max-width: 40%;
+
+      button{
+        width: 200px;
+      }
+    }
+
+    .youtube-section .container .box-video{
+      max-width: 50%;
+
+      iframe{
+        width: 350px;
+        height: 315px;
+      }
+    }
+
+
+    .youtube-section .container .team{
+      max-width: 50%;
+      margin-left: 2%;
+
+      #name{
+        font-size: 1.1rem;
+      }
+
+      #profission{
+        font-size: .9rem;
+        color: #FFF;
+      }
+
+      #btn-portfolio{
+        font-size: .8rem;
+        width: 100px;
+        margin-bottom: 6%;
+      }
+    }
+
+    .youtube-section .container .team .image img{
+        width: 200px;
+        height: 270px;
+    }
+
+
+}
+
+
+/* --------------- Menu Breakpoint of 912px ---------------------*/
+@media screen and (max-width: $menuBreakpoint4) {
+
+
+  /* ------------ Header */
+
+    .header-body .welcome{
+      width: 50%;
+    }
+
+    .header-body .welcome h1{
+        color: #FFF;
+        font-size: 1.7rem;
+
+    }
+
+    .header-body .welcome span{
+
+      span{
+
+      }
+    }
+
+    .header-body .welcome h2{
+      font-size: 1.5rem;
+    }
+
+    .header-body .welcome p{
+      font-size: 1rem;
+      margin-bottom: 9%;
+    }
+
+    .header-body .welcome .btn-learn-more{
+      padding: 1rem 3rem;
+      font-size: 1rem;
+    }
+
+    .header-body .image{
+      width: 30%;
+
+      img{
+        width: 480px;
+        height: 280px;
+      }
+    }
+
+
+}
+
+
+/* --------------- Menu Breakpoint of 820px ---------------------*/
+@media screen and (max-width: $menuBreakpoint5) {
+
+
+  /* ------------ Header */
+  .header{
+
+    header{
+
+      .header-body {
+
+        .welcome{
+          width: 90%;
+
+          h1{
+            color: #FFF;
+            font-size: 1.8rem;
+
+          }
+
+          h2{
+            font-size: 1.3rem;
+          }
+
+          p{
+            font-size: 1rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            padding: 1rem 3rem;
+            font-size: 1rem;
+          }
+
+        }
+
+        .editor-card{
+          width: 90%;
+          margin-left: 5%;
+
+          .back-card{
+            width: 80%;
+            margin: 1;
+            align-items: center;
+            text-align: center;
+
+            .editor{
+              align-items: center;
+              text-align: center;
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  //--------------
+  .technologies-section{
+
+    .container{
+
+      .card{
+        max-width: 40%;
+        margin: 1%;
+
+        .content{
+          p{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  //----------
+
+  .courses-section{
+
+    .card-box{
+      width: 80%;
+
+      .content{
+
+        .box{
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+
+          .bar{
+
+            #code-02{
+              font-size: .9rem;
+            }
+          }
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+
+        }
+
+        .body{
+
+          .top-bar{
+
+            div{
+              width: 90%;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+}
+
+/* --------------- Menu Breakpoint of 768px ---------------------*/
+@media screen and (max-width: $menuBreakpoint6) {
+
+
+  /* ------------ Header */
+  .header{
+
+    header{
+
+      .header-body {
+
+        .welcome{
+          width: 90%;
+
+          h1{
+            color: #FFF;
+            font-size: 2rem;
+
+          }
+
+          h2{
+            font-size: 1.7rem;
+          }
+
+          p{
+            font-size: 1.4rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            padding: 1rem 3rem;
+            font-size: 1.4rem;
+          }
+
+        }
+
+        .editor-card{
+          width: 90%;
+          margin-left: 5%;
+
+          .back-card{
+            width: 80%;
+            margin: 1;
+            align-items: center;
+            text-align: center;
+
+            .editor{
+              align-items: center;
+              text-align: center;
+
+              .editor-topbar{
+                h2{
+                  font-size: 1.4rem;
+                }
+              }
+
+              .editor-body{
+                .main-body{
+                  .box-code{
+                    span{
+                      #code{
+                        font-size: 1rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  //--------------
+  .technologies-section{
+
+    .container{
+
+      .card{
+        max-width: 40%;
+        margin: 1%;
+
+        .content{
+          p{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  //----------
+
+  .courses-section{
+
+    .card-box{
+      width: 80%;
+
+      .content{
+
+        .box{
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+
+          .bar{
+
+            #code-02{
+              font-size: .9rem;
+            }
+          }
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+
+        }
+
+        .body{
+
+          .top-bar{
+
+            div{
+              width: 90%;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+}
+
+/* --------------- Menu Breakpoint of 540px ---------------------*/
+@media screen and (max-width: $menuBreakpoint7) {
+
+
+  /* ------------ Header */
+  .header{
+
+    header{
+
+      .header-body {
+
+        .welcome{
+          width: 90%;
+
+          h1{
+            color: #FFF;
+            font-size: 1.8rem;
+
+          }
+
+          h2{
+            font-size: 1.3rem;
+          }
+
+          p{
+            font-size: 1rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            padding: 1rem 3rem;
+            font-size: 1rem;
+          }
+
+        }
+
+        .editor-card{
+          width: 90%;
+          margin-left: 5%;
+
+          .back-card{
+            width: 80%;
+            margin: 1;
+            align-items: center;
+            text-align: center;
+
+            .editor{
+              align-items: center;
+              text-align: center;
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+//----------------
+
+    .services-section .box-card .card{
+      max-width: 70%;
+    }
+
+    .services-section .box-card .card .image{
+      display: block;
+      flex-direction: column;
+
+      img{
+        width: 200px;
+        height: 160px;
+      }
+    }
+
+    //--------------
+
+    .technologies-section{
+
+      .container{
+
+        .card{
+          max-width: 40%;
+          margin: 1%;
+        }
+      }
+    }
+
+
+    .courses-section{
+
+      .card-box{
+        width: 80%;
+
+        .content{
+
+          .box{
+            position: static;
+            margin-top: 10%;
+            margin-left: 0%;
+
+          }
+
+          button{
+            width: 200px;
+            padding: 1.5rem 2rem;
+          }
+
+        }
+
+        .container{
+
+          .side-line{
+
+          }
+
+          .body{
+
+            .top-bar{
+
+              div{
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .job-section{
+      align-items: center;
+      text-align: center;
+
+    }
+    .job-section .container .box-image{
+      max-width: 70%;
+
+      img{
+        width: 300px;
+        height: 200px;
+      }
+    }
+
+    .job-section .container .box{
+      max-width: 70%;
+
+      h2{
+        font-size: 1.5rem;
+      }
+
+      div button{
+        width: 200px;
+        font-size: 1rem;
+      }
+
+    }
+
+    .website-service-section .container .details{
+      max-width: 100%;
+    }
+
+    .website-service-section .container .button{
+      max-width: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      button{
+        width: 200px;
+      }
+    }
+
+    .youtube-section .container .box-video{
+      max-width: 100%;
+
+      iframe{
+        width: 350px;
+        height: 315px;
+      }
+    }
+
+
+    .youtube-section .container .team{
+      max-width: 100%;
+      margin-left: 2%;
+
+      #name{
+        font-size: 1.1rem;
+      }
+
+      #profission{
+        font-size: .9rem;
+        color: #FFF;
+      }
+
+      #btn-portfolio{
+        font-size: .8rem;
+        width: 100px;
+        margin-bottom: 6%;
+      }
+    }
+
+    .youtube-section .container .team .image img{
+        width: 200px;
+        height: 270px;
+    }
+
+}
+
+/* --------------- Menu Breakpoint of 414px ---------------------*/
+@media screen and (max-width: $menuBreakpoint8) {
+
+
+  /* ------------ Header */
+
+  .header{
+
+    margin-left: 0;
+    align-items: center;
+
+    header{
+
+      .header-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0%;
+
+        .welcome{
+          width: 100%;
+          margin-left: 0%;
+
+          h1{
+            width: 200px;
+            font-size: 1.4rem;
+          }
+
+          h2{
+            font-size: 1.2rem;
+          }
+
+
+          p{
+            width: 200px;
+            font-size: 1rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            width: 200px;
+            font-size: 1rem;
+          }
+
+        }
+
+        .editor-card{
+          width: 80%;
+          margin: 0;
+
+          .back-card{
+            width: 80%;
+            margin: 1;
+            align-items: center;
+            text-align: center;
+
+            .editor{
+              align-items: center;
+              text-align: center;
+
+            }
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  //------------- technologies
+  .technologies-section{
+
+    .container{
+
+      .card{
+        max-width: 70%;
+        margin: 1%;
+      }
+    }
+  }
+
+  //-------------Courses
+  .courses-section{
+
+    .card-box{
+      width: 100%;
+
+      .content{
+
+        .box{
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+
+        }
+
+        .body{
+
+          .top-bar{
+
+            div{
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //----------------
+
+    .services-section .box-card .card{
+      max-width: 70%;
+    }
+
+    .services-section .box-card .card .image{
+      display: block;
+      flex-direction: column;
+
+      img{
+        width: 200px;
+        height: 160px;
+      }
+    }
+
+
+    .job-section{
+      align-items: center;
+      text-align: center;
+
+    }
+    .job-section .container .box-image{
+      max-width: 70%;
+
+      img{
+        width: 300px;
+        height: 200px;
+      }
+    }
+
+    .job-section .container .box{
+      max-width: 70%;
+
+      h2{
+        font-size: 1.5rem;
+      }
+
+      div button{
+        width: 200px;
+        font-size: 1rem;
+      }
+
+    }
+
+    .website-service-section .container .details{
+      max-width: 100%;
+    }
+
+    .website-service-section .container .button{
+      max-width: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      button{
+        width: 200px;
+      }
+    }
+
+    .youtube-section .container .box-video{
+      max-width: 100%;
+
+      iframe{
+        width: 350px;
+        height: 315px;
+      }
+    }
+
+
+    .youtube-section .container .team{
+      max-width: 100%;
+      margin-left: 2%;
+
+      #name{
+        font-size: 1.1rem;
+      }
+
+      #profission{
+        font-size: .9rem;
+        color: #FFF;
+      }
+
+      #btn-portfolio{
+        font-size: .8rem;
+        width: 100px;
+        margin-bottom: 6%;
+      }
+    }
+
+    .youtube-section .container .team .image img{
+        width: 200px;
+        height: 270px;
+    }
+
+
+}
+
+/* --------------- Menu Breakpoint of 412px ---------------------*/
+@media screen and (max-width: $menuBreakpoint9) {
+
+
+  /* ------------ Header */
+
+  .header{
+
+    margin-left: 0;
+    align-items: center;
+
+    header{
+
+      .header-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0%;
+
+        .welcome{
+          width: 100%;
+          margin-left: 0%;
+
+          h1{
+            width: 200px;
+            font-size: 1.4rem;
+          }
+
+          h2{
+            font-size: 1.2rem;
+          }
+
+
+          p{
+            width: 200px;
+            font-size: 1rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            width: 200px;
+            font-size: 1rem;
+          }
+
+        }
+
+        .editor-card{
+          width: 80%;
+          margin: 0;
+
+          .back-card{
+            width: 80%;
+            margin: 1;
+            align-items: center;
+            text-align: center;
+
+            .editor{
+              align-items: center;
+              text-align: center;
+
+            }
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  //------------- technologies
+  .technologies-section{
+
+    .container{
+
+      .card{
+        max-width: 40%;
+        margin: 1%;
+      }
+    }
+  }
+
+  //-------------Courses
+  .courses-section{
+
+    .card-box{
+      width: 100%;
+
+      .content{
+
+        .box{
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+
+        }
+
+        .body{
+
+          .top-bar{
+
+            div{
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+/* --------------- Menu Breakpoint of 393px ---------------------*/
+@media screen and (max-width: $menuBreakpoint10) {
+
+  //--------------
+  .header{
+
+    margin-left: 0;
+    align-items: center;
+
+    header{
+
+      .header-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0%;
+
+        .welcome{
+          width: 100%;
+          margin-left: 0%;
+
+          h1{
+            width: 200px;
+            font-size: 1.4rem;
+          }
+
+          h2{
+            font-size: 1.2rem;
+          }
+
+
+          p{
+            width: 200px;
+            font-size: 1rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            width: 200px;
+            font-size: 1rem;
+          }
+
+        }
+
+        .editor-card{
+          width: 80%;
+          margin: 0;
+
+          .back-card{
+            width: 80%;
+            margin: 1;
+            align-items: center;
+            text-align: center;
+
+            .editor{
+              align-items: center;
+              text-align: center;
+
+            }
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  //------------------
+  .technologies-section{
+
+    .container{
+
+      .card{
+        max-width: 40%;
+        margin: 1%;
+      }
+    }
+  }
+
+  //-----------------
+  .courses-section{
+
+    .card-box{
+      width: 100%;
+
+      .content{
+
+        .box{
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+          span{
+            i{
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .body{
+
+          .top-bar{
+
+            div{
+              width: 100%;
+
+              h3{
+                font-size: .9rem;
+              }
+            }
+          }
+
+          .main{
+            .card-course{
+              width: 80%;
+
+              .box{
+
+                div{
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+/* --------------- Menu Breakpoint of 390px ---------------------*/
+@media screen and (max-width: $menuBreakpoint11) {
+
+
+  /* ------------ Header */
+
+ //--------------
+ .header{
+
+  margin-left: 0;
+  align-items: center;
+
+  header{
+
+    .header-body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0%;
+
+      .welcome{
+        width: 100%;
+        margin-left: 0%;
+
+        h1{
+          width: 200px;
+          font-size: 1.4rem;
+        }
+
+        h2{
+          font-size: 1.2rem;
+        }
+
+
+        p{
+          width: 200px;
+          font-size: 1rem;
+          margin-bottom: 9%;
+        }
+
+        .btn-learn-more{
+          width: 200px;
+          font-size: 1rem;
+        }
+
+      }
+
+      .editor-card{
+        width: 80%;
+        margin: 0;
+
+        .back-card{
+          width: 80%;
+          margin: 1;
+          align-items: center;
+          text-align: center;
+
+          .editor{
+            align-items: center;
+            text-align: center;
+
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+
+//------------------
+.technologies-section{
+
+  .container{
+
+    .card{
+      max-width: 60%;
+      margin: 1%;
+    }
+  }
+}
+
+//-----------------
+.courses-section{
+
+  .card-box{
+    width: 100%;
+
+    .content{
+
+      .box{
+        position: static;
+        margin-top: 10%;
+        margin-left: 0%;
+      }
+
+      button{
+        width: 200px;
+        padding: 1.5rem 2rem;
+      }
+
+    }
+
+    .container{
+
+      .side-line{
+        span{
+          i{
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .body{
+
+        .top-bar{
+
+          div{
+            width: 100%;
+
+            h3{
+              font-size: .9rem;
+            }
+          }
+        }
+
+        .main{
+          .card-course{
+            width: 80%;
+
+            .box{
+
+              div{
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+}
+
+/* --------------- Menu Breakpoint of 375px ---------------------*/
+
+@media screen and (max-width: $menuBreakpoint12) {
+
+    /* ------------ Header */
+
+ //--------------
+ .header{
+
+  margin-left: 0;
+  align-items: center;
+
+  header{
+
+    .header-body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0%;
+
+      .welcome{
+        width: 100%;
+        margin-left: 0%;
+
+        h1{
+          width: 200px;
+          font-size: 1.4rem;
+        }
+
+        h2{
+          font-size: 1.2rem;
+        }
+
+
+        p{
+          width: 200px;
+          font-size: 1rem;
+          margin-bottom: 9%;
+        }
+
+        .btn-learn-more{
+          width: 200px;
+          font-size: 1rem;
+        }
+
+      }
+
+      .editor-card{
+        width: 80%;
+        margin: 0;
+
+        .back-card{
+          width: 80%;
+          margin: 1;
+          align-items: center;
+          text-align: center;
+
+          .editor{
+            align-items: center;
+            text-align: center;
+
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+
+//------------------
+.technologies-section{
+
+  .container{
+
+    .card{
+      max-width: 60%;
+      margin: 1%;
+    }
+  }
+}
+
+//-----------------
+.courses-section{
+
+  .card-box{
+    width: 100%;
+
+    .content{
+
+      .box{
+        position: static;
+        margin-top: 10%;
+        margin-left: 0%;
+      }
+
+      button{
+        width: 200px;
+        padding: 1.5rem 2rem;
+      }
+
+    }
+
+    .container{
+
+      .side-line{
+        span{
+          i{
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .body{
+
+        .top-bar{
+
+          div{
+            width: 100%;
+
+            h3{
+              font-size: .9rem;
+            }
+          }
+        }
+
+        .main{
+          .card-course{
+            width: 80%;
+
+            .box{
+
+              div{
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//---------------
+  .job-section{
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .job-section .container .box-image{
+    max-width: 70%;
+
+    img{
+      width: 230px;
+      height: 150px;
+    }
+  }
+
+  .job-section .container .box{
+    max-width: 70%;
+
+    h2{
+      font-size: 1.5rem;
+    }
+
+    div p{
+
+    }
+
+    div button{
+      width: 200px;
+      font-size: 1rem;
+    }
+
+  }
+
+  .website-service-section .container .details{
+    max-width: 100%;
+  }
+
+  .website-service-section .container .button{
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    button{
+      width: 200px;
+    }
+  }
+
+  .youtube-section .container .box-video{
+    max-width: 100%;
+
+    iframe{
+      width: 350px;
+      height: 315px;
+    }
+  }
+
+  .youtube-section .container .team{
+    max-width: 100%;
+
+    #name{
+      font-size: .9rem;
+    }
+
+    #profission{
+      font-size: .7rem;
+      color: #FFF;
+    }
+
+    #btn-portfolio{
+      font-size: .8rem;
+      width: 100px;
+      margin-bottom: 6%;
+    }
+  }
+
+}
+
+/* --------------- Menu Breakpoint of 360px ---------------------*/
+
+@media screen and (max-width: $menuBreakpoint13) {
+
+  .header{
+    padding: 1rem 0;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+
+    header{
+      margin: 0;
+      margin-top: 10%;
+
+      .header-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0%;
+
+        .welcome{
+          width: 100%;
+
+          h1{
+            width: 200px;
+            font-size: 1.4rem;
+          }
+
+          h2{
+            font-size: 1.2rem;
+          }
+
+          p{
+            width: 200px;
+            font-size: 1rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            width: 180px;
+            font-size: 1rem;
+            margin-top: 3%;
+          }
+
+
+
+        }
+
+        .editor-card{
+          width: 80%;
+          margin: 0;
+
+          .back-card{
+            width: 80%;
+            margin: 1;
+            align-items: center;
+            text-align: center;
+
+            .editor{
+              align-items: center;
+              text-align: center;
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  //---------------
+
+  .services-section .box-card .card{
+    max-width: 70%;
+  }
+
+  .services-section .box-card .card .image{
+    display: block;
+    flex-direction: column;
+  }
+
+  //--------------------
+  .technologies-section{
+
+    .container{
+
+      .card{
+        max-width: 70%;
+        margin: 1%;
+      }
+    }
+  }
+
+
+  .courses-section{
+
+    .card-box{
+
+
+      h2{
+        font-size: 1.3rem;
+      }
+
+      .content{
+
+        .titles{
+
+          h3{
+            font-size: 1.2rem;
+            span{
+              font-size: 1.2rem;
+            }
+          }
+
+          .items{
+            span{
+              font-size: .9rem;
+            }
+          }
+        }
+
+        .box{
+          width: 205px;
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+
+          span{
+            i{
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .body{
+          width: 90%;
+
+          .top-bar{
+            width: 100%;
+
+            div{
+
+              h3{
+                font-size: .8rem;
+              }
+            }
+          }
+
+          .main{
+
+            .card-course{
+              width: 90%;
+
+              .box{
+
+                div{
+
+                  .title{
+                    font-size: .9rem;
+
+                  }
+
+                  .details{
+                    font-size: .7rem;
+                  }
+                }
+
+
+                .btn-enroll{
+                  width: 60px;
+                  height: 57px;
+                  font-size: .9rem;
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .job-section{
+    align-items: center;
+    text-align: center;
+
+  }
+  .job-section .container .box-image{
+    max-width: 70%;
+
+    img{
+      width: 230px;
+      height: 150px;
+    }
+  }
+
+  .job-section .container .box{
+    max-width: 70%;
+
+    h2{
+      font-size: 1.5rem;
+    }
+
+    div p{
+
+    }
+
+    div button{
+      width: 200px;
+      font-size: 1rem;
+    }
+
+  }
+
+  .website-service-section .container .details{
+    max-width: 100%;
+  }
+
+  .website-service-section .container .button{
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    button{
+      width: 200px;
+    }
+  }
+
+  .youtube-section .container .box-video{
+    max-width: 100%;
+
+    iframe{
+      width: 350px;
+      height: 315px;
+    }
+  }
+
+  .youtube-section .container .team{
+    max-width: 100%;
+
+    #name{
+      font-size: .9rem;
+    }
+
+    #profission{
+      font-size: .7rem;
+      color: #FFF;
+    }
+
+    #btn-portfolio{
+      font-size: .8rem;
+      width: 100px;
+      margin-bottom: 6%;
+    }
+  }
+
+}
+
+
+/* --------------- Menu Breakpoint of 280px ---------------------*/
+
+@media screen and (max-width: $menuBreakpoint14) {
+
+  /* ------------ Header */
+
+  .header{
+    padding: 1rem 0;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+
+    header{
+      margin: 0;
+      margin-top: 2%;
+
+      .header-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0%;
+
+        .welcome{
+          width: 100%;
+
+          h1{
+            width: 200px;
+            font-size: 1.4rem;
+          }
+
+          h2{
+            font-size: 1.2rem;
+          }
+
+          p{
+            width: 200px;
+            font-size: 1rem;
+            margin-bottom: 9%;
+          }
+
+          .btn-learn-more{
+            width: 180px;
+            font-size: 1rem;
+            margin-top: 3%;
+          }
+
+
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+  /*----------- Services --------------------*/
+  .services-section .box-card .card{
+    max-width: 100%;
+  }
+
+  .services-section .box-card .card .image{
+    display: block;
+    flex-direction: column;
+  }
+
+  .services-section .box-card .card .image img{
+    width: 200px;
+    height: 150px;
+  }
+
+
+
+  .courses-section{
+
+    .card-box{
+
+
+      h2{
+        font-size: 1.3rem;
+      }
+
+      .content{
+
+        .titles{
+
+          h3{
+            font-size: 1.2rem;
+            span{
+              font-size: 1.2rem;
+            }
+          }
+
+          .items{
+            span{
+              font-size: .9rem;
+            }
+          }
+        }
+
+        .box{
+          width: 205px;
+          position: static;
+          margin-top: 10%;
+          margin-left: 0%;
+
+        }
+
+        button{
+          width: 200px;
+          padding: 1.5rem 2rem;
+        }
+
+      }
+
+      .container{
+
+        .side-line{
+
+          span{
+            i{
+              font-size: 1.1rem;
+            }
+          }
+        }
+
+        .body{
+          width: 90%;
+
+          .top-bar{
+            width: 100%;
+
+            div{
+
+              h3{
+                font-size: .7rem;
+              }
+            }
+          }
+
+          .main{
+
+            .card-course{
+              width: 90%;
+
+              .box{
+
+                div{
+
+                  .title{
+                    font-size: .9rem;
+
+                  }
+
+                  .details{
+                    font-size: .7rem;
+                  }
+                }
+
+
+                .btn-enroll{
+                  width: 60px;
+                  height: 57px;
+                  font-size: .9rem;
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .job-section{
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .job-section .container .box-image{
+    max-width: 100%;
+
+    img{
+      width: 200px;
+      height: 150px;
+    }
+  }
+
+  .job-section .container .box{
+    max-width: 100%;
+
+    h2{
+      font-size: 1.5rem;
+    }
+
+    div p{
+
+    }
+
+    div button{
+      width: 200px;
+      font-size: 1rem;
+    }
+
+  }
+
+  .website-service-section .container .details{
+    max-width: 100%;
+  }
+
+  .website-service-section .container .button{
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    button{
+      width: 200px;
+    }
+  }
+
+  .youtube-section .container .box-video{
+    max-width: 100%;
+
+    iframe{
+      width: 250px;
+      height: 310px;
+    }
+  }
+
+  .youtube-section .container .team{
+    max-width: 100%;
+
+    #name{
+      font-size: .9rem;
+    }
+
+    #profission{
+      font-size: .7rem;
+      color: #FFF;
+    }
+
+    #btn-portfolio{
+      font-size: .8rem;
+      width: 100px;
+      margin-bottom: 6%;
+    }
+  }
+
+}
+

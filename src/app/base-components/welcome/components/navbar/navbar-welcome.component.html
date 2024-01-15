@@ -1,0 +1,48 @@
+<nav [ngClass]="toolbarClasses.toolbar" [class.navbar_change]="navbar_">
+
+  <div [ngClass]="toolbarClasses.companyLogo">
+
+    <h2>i<span>LED</span></h2>
+  </div>
+
+  <div [ngClass]="toolbarClasses.responsiveMenu" (click)="toggleMenu()">
+    <i class="fa fa-bars" *ngIf="!isMenuOpen"></i>
+    <i class="fa fa-close" *ngIf="isMenuOpen"></i>
+  </div>
+
+  <div [ngClass]="toolbarClasses.navRouter" [class.is-menu-open]="isMenuOpen">
+
+    <div [ngClass]="toolbarClasses.router" >
+
+      <ul>
+        <span *ngFor="let menu of menuItems">
+          <li *ngIf="menu.title=='Applications' && menu.isLogged">
+            <a [routerLink]="[menu.routerLink]" [routerLinkActive]="toolbarClasses.routerActive" [routerLinkActiveOptions]="{ exact: true }">{{ menu.title }}</a>
+            <!--<i [class]="menu.icon"></i>-->
+          </li>
+          <li *ngIf="!menu.isLogged">
+            <a [routerLink]="[menu.routerLink]" [routerLinkActive]="toolbarClasses.routerActive" [routerLinkActiveOptions]="{ exact: true }">{{ menu.title }}</a>
+            <!--<i [class]="menu.icon"></i>-->
+          </li>
+        </span>
+      </ul>
+
+    </div>
+
+    <!--<div [ngClass]="toolbarClasses.authLinks">
+
+      <button class="login" [routerLink]="authRouter.login">Entrar</button>
+
+      <button id="request" [routerLink]="authRouter.request">Request a service</button>
+
+      <button [ngClass]="toolbarClasses.socialMidia" [routerLink]="authRouter.facebook" ><i class="fa-brands fa-facebook fa-2x"></i></button>
+      <button [ngClass]="toolbarClasses.socialMidia" [routerLink]="authRouter.twiter" ><i class="fa-brands fa-twitter fa-2x"></i></button>
+      <button [ngClass]="toolbarClasses.socialMidia" [routerLink]="authRouter.instagram" ><i class="fa-brands fa-instagram fa-2x"></i></button>
+    </div>-->
+
+  </div>
+
+
+
+</nav>
+

@@ -1,0 +1,101 @@
+{
+  "users": [
+    {
+      "username": "",
+      "signout": true,
+      "id": 1,
+      "firstname": "Laurindo",
+      "lastname": "Benjamim",
+      "email": "rocketmc2009@gmail.com",
+      "phone": "00244933443506",
+      "password": "Asdsdsd1212",
+      "role": "",
+      "isActive": true,
+      "createdAt": "25/10/2023 02:16",
+      "updatedAt": "25/10/2023 02:16",
+      "tableName": "users",
+      "avatar": "https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png"
+    },
+    {
+      "username": "",
+      "signout": true,
+      "id": 2,
+      "firstname": "Laurindo",
+      "lastname": "Benjamim",
+      "email": "rocketmc20010@gmail.com",
+      "phone": "00351933443506",
+      "password": "Asasasas",
+      "role": "",
+      "isActive": true,
+      "createdAt": "25/10/2023 11:28",
+      "updatedAt": "25/10/2023 11:28",
+      "tableName": "users",
+      "avatar": "https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png"
+    },
+    {
+      "username": "",
+      "signout": true,
+      "id": 3,
+      "firstname": "Laurindo",
+      "lastname": "Benjamim",
+      "email": "rocketmc20011@gmail.com",
+      "phone": "00351933443501",
+      "password": "Asasasas2121",
+      "role": "",
+      "isActive": true,
+      "createdAt": "25/10/2023 11:38",
+      "updatedAt": "25/10/2023 11:38",
+      "tableName": "users",
+      "avatar": "https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png"
+    },
+    {
+      "username": "",
+      "signout": true,
+      "id": 4,
+      "firstname": "Laurindo",
+      "lastname": "Benjamim",
+      "email": "rocketmc20012@gmail.com",
+      "phone": "00244933443501",
+      "password": "Asasaws111",
+      "role": "",
+      "isActive": true,
+      "createdAt": "25/10/2023 11:38",
+      "updatedAt": "25/10/2023 11:38",
+      "tableName": "users",
+      "avatar": "https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png"
+    },
+    {
+      "username": "",
+      "signout": true,
+      "id": 5,
+      "firstname": "Laurindo",
+      "lastname": "Benjamim",
+      "email": "rocketmc@gmail.com",
+      "phone": "00244933443504",
+      "password": "Agosto201990##",
+      "role": "",
+      "isActive": true,
+      "createdAt": "26/10/2023 01:54",
+      "updatedAt": "26/10/2023 01:54",
+      "tableName": "users",
+      "avatar": "https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

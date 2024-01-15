@@ -1,0 +1,1018 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Dosis:wght@200;300;700;800&family=Fredericka+the+Great&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Public+Sans:ital,wght@1,100;1,200;1,800;1,900&family=Rubik+Moonrocks&family=Tektur:wght@400;600;800;900&display=swap');
+
+
+$menuBreakpoint1:1280px;
+$menuBreakpoint2:1243px;
+$menuBreakpoint3:1024px;
+$menuBreakpoint4: 912px;
+$menuBreakpoint5:820px;
+$menuBreakpoint6:768px;
+$menuBreakpoint7:540px;
+$menuBreakpoint8:414px;
+$menuBreakpoint9:412px;
+$menuBreakpoint10:393px;
+$menuBreakpoint11:390px;
+$menuBreakpoint12:375px;
+$menuBreakpoint13:360px;
+$menuBreakpoint14:280px;
+
+
+
+.section-contact{
+  width:100%;
+  height: 100vh;
+  position:static;
+  top: 0;
+  transition: all .5s ease;
+  background: #020025;
+  text-align: center;
+  align-items: center;
+
+  .container{
+    padding: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: url("../../../../assets/img/wave-06.svg") no-repeat, #020025;
+
+    .welcome{
+      width: 50%;
+      padding: 2rem;
+
+      h1{
+        color: #d8d8d8;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 5%;
+        span{
+          color: #179983;
+          box-shadow: 0 1px 7px;
+
+          span{
+            color: #FFF;
+            box-shadow: 0 0 0;
+            font-family: 'Dancing Script', cursive;
+          }
+        }
+      }
+
+      .form{
+        padding: .2rem;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(202, 202, 202, 0.25);
+        box-shadow: 0 1px 7px rgba(0, 0, 0, .25);
+
+        input, textarea{
+          width: 95%;
+          padding: 1rem;
+          margin: .8%;
+          border: 1px solid #6d6d6d;
+          outline: none;
+          background-color: transparent;
+          color: #d8d8d8;
+        }
+
+        button{
+          padding: .5rem 2rem;
+          margin-bottom: 2%;
+          color: #000000;
+          font-weight: 600;
+          border: none;
+          border-radius: 1rem;
+          cursor: pointer;
+        }
+      }
+
+
+
+    }
+
+    .image{
+      width: 50%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items:start;
+      color: #d8d8d8;
+      font-size: 1rem;
+      img{
+        width: 300px;
+        height: 300px;
+      }
+
+      span{
+        margin: 1%;
+        border-bottom: 1px solid #cccccc;
+
+      }
+    }
+
+  }
+
+
+}
+
+
+
+
+.section-contact .container .welcome .form input:focus,
+.section-contact .container .welcome .form textarea:focus{
+  background-color: rgba(0, 0, 0, .25);
+
+}
+
+.section-contact .container .welcome .form input::-moz-placeholder,
+.section-contact .container .welcome .form textarea::-moz-placeholder{
+  color: rgba(148, 148, 148, 0.22);
+  opacity: 1;
+}
+
+.section-contact .container .welcome .form input::placeholder,
+.section-contact .container .welcome .form textarea::placeholder{
+  color: rgba(148, 148, 148, 0.22);
+  opacity: 1;
+}
+
+
+
+
+
+
+/* ------------------   Reponsive CSS
+*/
+
+/* --------------- Menu Breakpoint of 1280px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint1) {
+
+    .section-contact{
+
+      .container{
+        padding: 5rem;
+
+        .welcome{
+          width: 50%;
+          padding: 2rem;
+
+          h1{
+            color: #b1b1b1;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+
+            input, textarea{
+              width: 95%;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          margin-top: 10%;
+
+          img{
+            width: 200px;
+            height: 200px;
+          }
+
+          span{
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+
+  }
+
+
+  /* --------------- Menu Breakpoint of 1243px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint2) {
+
+
+
+
+
+  }
+
+  /* --------------- Menu Breakpoint of 1024px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint3) {
+
+
+    /* ------------ Header */
+  //------------
+  .section-description{
+
+    .container{
+      width: 100%;
+      margin-top: 10%;
+
+      .detail{
+        width: 100%;
+
+      }
+    }
+
+  }
+
+  //-----------------
+    .models-section{
+      margin-top: 0%;
+
+      .box-card{
+
+          .card{
+            max-width: 40%;
+
+            .image{
+
+              img{
+                width: 200px;
+                height: 150px;
+              }
+            }
+
+          }
+
+      }
+
+    }
+
+
+
+      .courses-section .card-box .box{
+        max-width: 100%;
+        margin-bottom: 2%;
+      }
+
+      .job-section{
+        align-items: center;
+        text-align: center;
+
+      }
+      .job-section .container .box-image{
+        max-width: 70%;
+
+        img{
+          width: 300px;
+          height: 200px;
+        }
+      }
+
+      .job-section .container .box{
+        max-width: 70%;
+
+        h2{
+          font-size: 1.5rem;
+        }
+
+        div p{
+
+        }
+
+        div button{
+          width: 200px;
+          font-size: 1rem;
+        }
+
+      }
+
+      .wetsite-service-section .container .details{
+        max-width: 60%;
+      }
+
+      .wetsite-service-section .container .button{
+        max-width: 40%;
+
+        button{
+          width: 200px;
+        }
+      }
+
+      .youtube-section .container .box-video{
+        max-width: 50%;
+
+        iframe{
+          width: 350px;
+          height: 315px;
+        }
+      }
+
+
+      .youtube-section .container .team{
+        max-width: 50%;
+        margin-left: 2%;
+
+        #name{
+          font-size: 1.1rem;
+        }
+
+        #profission{
+          font-size: .9rem;
+          color: #FFF;
+        }
+
+        #btn-portfolio{
+          font-size: .8rem;
+          width: 100px;
+          margin-bottom: 6%;
+        }
+      }
+
+      .youtube-section .container .team .image img{
+          width: 200px;
+          height: 270px;
+      }
+
+
+  }
+
+
+  /* --------------- Menu Breakpoint of 912px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint4) {
+
+
+    //------------
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 15%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: 0%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 2rem;
+
+            span{
+
+              span{
+
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+              font-size: 1.6rem;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            font-size: 1.4rem;
+            width: 85%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+
+  }
+
+
+  /* --------------- Menu Breakpoint of 820px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint5) {
+
+
+    /* ------------ Header */
+    .header-body{
+      display: flex;
+      flex-direction: column;
+    }
+
+      .header-body .welcome{
+        width: 100%;
+      }
+
+      .header-body .welcome h1{
+          color: #FFF;
+          font-size: 2rem;
+
+      }
+
+      .header-body .welcome span{
+
+        span{
+
+        }
+      }
+
+      .header-body .welcome h2{
+        font-size: 1.5rem;
+      }
+
+      .header-body .welcome p{
+        font-size: 1rem;
+        margin-bottom: 9%;
+      }
+
+      .header-body .welcome .btn-learn-more{
+        padding: 1rem 3rem;
+        font-size: 1rem;
+      }
+
+      .header-body .image{
+        width: 100%;
+
+        img{
+          width: 500px;
+          height: 280px;
+        }
+      }
+
+
+  }
+
+  /* --------------- Menu Breakpoint of 768px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint6) {
+
+
+    /* ------------ Header */
+    .header-body{
+      display: flex;
+      flex-direction: column;
+    }
+
+      .header-body .welcome{
+        width: 100%;
+      }
+
+      .header-body .welcome h1{
+          color: #FFF;
+          font-size: 2rem;
+
+      }
+
+      .header-body .welcome span{
+
+        span{
+
+        }
+      }
+
+      .header-body .welcome h2{
+        font-size: 1.5rem;
+      }
+
+      .header-body .welcome p{
+        font-size: 1rem;
+        margin-bottom: 9%;
+      }
+
+      .header-body .welcome .btn-learn-more{
+        font-size: 1rem;
+      }
+
+      .header-body .image{
+        width: 100%;
+
+        img{
+          width: 500px;
+          height: 280px;
+        }
+      }
+
+
+  }
+
+  /* --------------- Menu Breakpoint of 540px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint7) {
+
+    //------------
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 15%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: 0%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            width: 85%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+  }
+
+  /* --------------- Menu Breakpoint of 414px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint8) {
+
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 0%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: -5%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+              font-size: 1.1rem;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            width: 90%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+
+
+  }
+
+  /* --------------- Menu Breakpoint of 412px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint9) {
+
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 0%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: -5%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+              font-size: 1.1rem;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            width: 70%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+  /* --------------- Menu Breakpoint of 393px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint10) {
+
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 7%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: -5%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+              font-size: 1.1rem;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            width: 90%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+
+
+  }
+
+  /* --------------- Menu Breakpoint of 390px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint11) {
+
+
+  }
+
+   /* --------------- Menu Breakpoint of 375px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint12){
+
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 55%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: -5%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+              font-size: 1.1rem;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            width: 90%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+
+  }
+
+   /* --------------- Menu Breakpoint of 360px ---------------------*/
+  @media screen and (max-width: $menuBreakpoint13){
+
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 35%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: -5%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+              font-size: 1.1rem;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            width: 90%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+  /* --------------- Menu Breakpoint of 280px ---------------------*/
+
+  @media screen and (max-width: $menuBreakpoint14) {
+
+    .section-contact{
+      width: 100%;
+      margin-top: 0%;
+      margin-bottom: 30%;
+
+      .container{
+        width: 100%;
+        padding: .3rem;
+        margin-top: -5%;
+
+        .welcome{
+          width: 100%;
+          margin-top: 30%;
+
+          h1{
+            color: #ffffff;
+            font-size: 1.3rem;
+
+            span{
+
+              span{
+              }
+            }
+          }
+
+          .form{
+            width: 100%;
+
+            input, textarea{
+              width: 95%;
+            }
+
+            button{
+              padding: .5rem 2rem;
+
+            }
+          }
+
+        }
+
+        .image{
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 0%;
+
+          img{
+            display: none;
+          }
+
+          span{
+            width: 85%;
+            margin: 1%;
+
+          }
+        }
+
+      }
+
+
+    }
+
+
+  }
+

@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Lau",
+      "lastName": "Ma",
+      "email": "admin@app.com",
+      "password": "root",
+      "role": "ROOT",
+      "isActive": true,
+      "isLogged": false
+    },
+    {
+      "id": 1,
+      "firstName": "Lau",
+      "lastName": "Ma",
+      "email": "admin@app.com",
+      "password": "root",
+      "role": "ROOT",
+      "isActive": true,
+      "isLogged": false
+    }
+  ],
+
+  "signin": [
+
+  ],
+
+  "signout": [
+
+  ]
+
+}
