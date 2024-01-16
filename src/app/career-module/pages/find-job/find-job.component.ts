@@ -1,7 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
-const metaTags = [{ name: 'iled:site', content:'Iled Multi dimenssional'  }];
+const metaTags = [
+  { name: 'findjob:site',
+  content:"Job career; Make your career in iledmd; Find a job in iledmd; find your job career in iledmd; Make a career with the iledmd; iluminate your future with iledmd;"
+  + "Iluminate your life getting a job in iledmd;  getting my dream career; getting my job of dreams;"
+  }
+];
 
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
@@ -16,6 +21,9 @@ import { LoadFromContentfulService } from '../../service/load-from-contentful.se
   styleUrls: ['./find-job.component.scss']
 })
 export class FindJobComponent {
+  title = 'Job Career';
+  description = "find your job career in iledmd; Make a career with the iledmd; iluminate your future with iledmd;"
+  + "Iluminate your life getting a job in iledmd;  getting my dream career; getting my job of dreams;"
 
   jobs = job_contents;
   links = job_categories;
@@ -35,12 +43,12 @@ export class FindJobComponent {
     private titleService: Title,
     private metaService: Meta
     ){
-      this.setSEOData("Job Career", "find a job")
+      this.setSEOData(this.title, this.description)
   }
 
   setSEOData(title: string, description: string) {
     this.titleService.setTitle(title);
-    //this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ name: 'description', content: description });
     this.metaService.addTags( metaTags , true);
   }
 

@@ -3,6 +3,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { job_contents } from '../../service/job-contents';
 import { job_categories } from '../../service/job-categories';
+import { Title, Meta } from '@angular/platform-browser';
+
+const metaTags = [
+  { name: 'Job Career | vaga de operador de inventarios porto:site',
+  content:"Vaga de operador de inventarios no Porto; emprego de operador de inventarios no porto; trabalho para operador de inventarios no porto; trabalhar como operador de inventarios no porto; vaga para pizzeiro no Porto"
+  }
+];
 
 @Component({
   selector: 'app-vaga-operador-de-inventarios-porto',
@@ -10,6 +17,9 @@ import { job_categories } from '../../service/job-categories';
   styleUrls: ['./vaga-operador-de-inventarios-porto.component.scss']
 })
 export class VagaOperadorDeInventariosPortoComponent {
+
+  title = 'Job Career | Vaga de Operador de inventarios Porto';
+  description = "Vaga de operador de inventarios no Porto; emprego de operador de inventarios no porto; trabalho para operador de inventarios no porto; trabalhar como operador de inventarios no porto; vaga para pizzeiro no Porto";
 
   jobs = job_contents;
   links = job_categories;
@@ -25,8 +35,11 @@ export class VagaOperadorDeInventariosPortoComponent {
 
 
   constructor(private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private titleService: Title,
+    private metaService: Meta
     ){
+      this.setSEOData(this.title, this.description)
 
   }
 
@@ -49,6 +62,14 @@ export class VagaOperadorDeInventariosPortoComponent {
 
      })
   }
+
+
+  setSEOData(title: string, description: string) {
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.addTags( metaTags , true);
+  }
+
 
   applyCareer(){
     this.router.navigate(['/career/apply-now/'])

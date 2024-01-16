@@ -3,6 +3,13 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { job_contents } from '../../service/job-contents';
 import { job_categories } from '../../service/job-categories';
+import { Title, Meta } from '@angular/platform-browser';
+
+const metaTags = [
+  { name: 'Job Career | vaga pizzaiolo:site',
+  content:"Vaga de Pizzailo; emprego de pizzaiolo no porto; trabalho para pizzaiolo no porto; trabalhar em pizzaria no porto; vaga para pizzeiro no Porto"
+  }
+];
 
 @Component({
   selector: 'app-vaga-de-pizza',
@@ -10,6 +17,9 @@ import { job_categories } from '../../service/job-categories';
   styleUrls: ['./vaga-de-pizza.component.scss']
 })
 export class VagaDePizzaComponent {
+
+  title = 'Job Career | vaga pizzaiolo Porto';
+  description = "Vaga de Pizzailo; emprego de pizzaiolo no porto; trabalho para pizzaiolo no porto; trabalhar em pizzaria no porto; vaga para pizzeiro no Porto";
 
   jobs = job_contents;
   links = job_categories;
@@ -25,8 +35,11 @@ export class VagaDePizzaComponent {
 
 
   constructor(private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private titleService: Title,
+    private metaService: Meta
     ){
+      this.setSEOData(this.title, this.description)
 
   }
 
@@ -48,6 +61,12 @@ export class VagaDePizzaComponent {
       });
 
      })
+  }
+
+  setSEOData(title: string, description: string) {
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.addTags( metaTags , true);
   }
 
   applyCareer(){

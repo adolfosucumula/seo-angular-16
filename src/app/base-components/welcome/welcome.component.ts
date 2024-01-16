@@ -2,7 +2,12 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Title, Meta } from '@angular/platform-browser';
 
-const metaTags = [{ name: 'iled:site', content:'Iled Multi dimenssional'  }];
+const metaTags = [
+  { name: 'iled:site',
+  content:"Iled Multi dimenssional; Iled md is a company of software developmen; Iled means something like I have light or I'm iluminated;"
+  + "Iled is a software company; Startup iled; Startup iledmd."
+  }
+];
 
 import { navbarMenu } from './components/navbar/css-utils/menu';
 import Typed  from 'typed.js'
@@ -22,6 +27,11 @@ export class WelcomeComponent implements OnInit{
   selectors = [
     'title', 'details'
   ];
+
+  title = 'Iled Corporation';
+  description = "Iled Multi dimenssional; Iled md is a company of software developmen; Iled means something like I have light or I'm iluminated;"
+  + "Iled is a software company; Startup iled; Startup iledmd.";
+
 
   cssSelectors = myCssSelectors;
 
@@ -55,14 +65,14 @@ export class WelcomeComponent implements OnInit{
     private titleService: Title,
     private metaService: Meta
     ){
-      this.setSEOData("Iled", "SEO with Angular")
+      this.setSEOData(this.title, this.description)
     }
 
-  setSEOData(title: string, description: string) {
-    this.titleService.setTitle(title);
-    //this.metaService.updateTag({ name: 'description', content: description });
-    this.metaService.addTags( metaTags , true);
-  }
+    setSEOData(title: string, description: string) {
+      this.titleService.setTitle(title);
+      this.metaService.updateTag({ name: 'description', content: description });
+      this.metaService.addTags( metaTags , true);
+    }
 
 
   ngOnInit(): void {

@@ -30,6 +30,7 @@ import { ErrorAlertDialogComponent } from './alerts-module/dialog/error-alert-di
 import { SuccessAlertDialogComponent } from './alerts-module/dialog/success-alert-dialog/success-alert-dialog.component';
 import { FindJobComponent } from './career-module/pages/find-job/find-job.component';
 import { Error404Component } from './error-module/error-pages/error404/error404.component';
+import { PrivacePolicePageComponent } from './privace-police-page/privace-police-page.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { Error404Component } from './error-module/error-pages/error404/error404.
     WelcomeComponent,
     FindJobComponent,
     Error404Component,
+    PrivacePolicePageComponent,
 
     // Alerts
     AlertModalComponent,
