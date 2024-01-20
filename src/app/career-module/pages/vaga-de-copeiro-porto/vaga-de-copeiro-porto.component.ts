@@ -6,9 +6,10 @@ import { job_categories } from '../../service/job-categories';
 import { Title, Meta } from '@angular/platform-browser';
 
 const metaTags = [
-  { name: 'Job Career | vaga para ajudante de cozinha no porto:site',
-  content:"Vaga de Ajudante de Cozinha no Porto; emprego de Ajudante de Cozinha no porto; trabalho para ajudante de Cozinha no porto;"
-  + "trabalhar como ajudante de cozinha no porto; vaga para ajudante de cozinha no Porto"
+  { name: 'Job Career | vaga para empregada de limpeza e copeioro em matozinhos, porto:site',
+  content:"Vaga de Copeiro e empregada de limpeza em matosinhos, Porto;"
+  + "emprego de copeiro e limpeza em Matozinhos, porto; trabalho para empregada de limpeza e copeiro em matosinhos, porto;"
+  + "trabalhar como empregada de limpeza e copeiro em Matosinhos, porto; vaga para empregada de limpeza e copeiro em matosinhos, Porto"
   }
 ];
 
@@ -18,9 +19,10 @@ const metaTags = [
   styleUrls: ['./vaga-de-copeiro-porto.component.scss']
 })
 export class VagaDeCopeiroPortoComponent {
-  title = 'Job Career | Vaga de de Ajudante de Cozinha no Porto';
-  description = "Vaga de Ajudante de Cozinha no Porto; emprego de Ajudante de Cozinha no porto; trabalho para ajudante de Cozinha no porto;"
-  + "trabalhar como ajudante de cozinha no porto; vaga para ajudante de cozinha no Porto";
+  title = 'Job Career | vaga para empregada de limpeza e copeioro em matozinhos - Porto';
+  description = "Vaga de Copeiro e empregada de limpeza em matosinhos, Porto;"
+  + "emprego de copeiro e limpeza em Matozinhos, porto; trabalho para empregada de limpeza e copeiro em matosinhos, porto;"
+  + "trabalhar como empregada de limpeza e copeiro em Matosinhos, porto; vaga para empregada de limpeza e copeiro em matosinhos, Porto";
 
   jobs = job_contents;
   links = job_categories;

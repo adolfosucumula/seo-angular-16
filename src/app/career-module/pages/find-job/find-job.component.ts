@@ -53,7 +53,7 @@ export class FindJobComponent {
   }
 
   ngOnInit(): void{
-    generateHashDigest("vaga-para-ajudante-de-cozinha-porto").then((digest)=> {
+    generateHashDigest("vaga-para-empregada-de-copeiro-e-limpeza-porto").then((digest)=> {
       console.log(digest)
     })
 

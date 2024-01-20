@@ -215,8 +215,8 @@
 
             </div>-->
 
+            <!--<a class="card" *ngFor="let item of jobs" [routerLink]="item.path + ''+ item.hashKey">-->
             <a class="card" *ngFor="let item of jobs" [routerLink]="item.path + ''+ item.hashKey">
-
               <div class="title">
                 <h1>{{ item.category}}</h1>
                 <i class="fa-solid fa-ellipsis-vertical"></i>

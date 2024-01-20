@@ -105,7 +105,7 @@ export const job_contents: JobsList[] = [
     },
     {
       id: 4,
-      hashKey: 'e2522aa8b724bd649e6dd6a8d293ee3ecccbbce4',
+      hashKey: 'afede9d30ec9532abb5e1488539c2dfb258eb57e',
       category: "Vaga de Empregada de Limpeza e Copeira/o - Matozinhos",
       company: "Restaurante em Matozinhos",
       location: "Porto-Portugal",
@@ -126,7 +126,7 @@ export const job_contents: JobsList[] = [
       isActive: "1",
       numberOfCandidates: 3,
       benefits: "Trabalho presencial",
-      path: "/career/vaga-para-ajudante-de-cozinha-porto/"
+      path: "/career/vaga-para-empregada-de-copeiro-e-limpeza-porto/"
     },
 
   ];
