@@ -18,6 +18,7 @@ import { FooterComponent } from 'src/app/base-components/welcome/components/foot
 import { VagaDePizzaComponent } from '../pages/vaga-de-pizza/vaga-de-pizza.component';
 import { VagaOperadorDeInventariosPortoComponent } from '../pages/vaga-operador-de-inventarios-porto/vaga-operador-de-inventarios-porto.component';
 import { VagaParaAjudanteDeCozinhaComponent } from '../pages/vaga-para-ajudante-de-cozinha/vaga-para-ajudante-de-cozinha.component';
+import { VagaDeCopeiroPortoComponent } from '../pages/vaga-de-copeiro-porto/vaga-de-copeiro-porto.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { VagaParaAjudanteDeCozinhaComponent } from '../pages/vaga-para-ajudante-
     FooterComponent,
     VagaDePizzaComponent,
     VagaOperadorDeInventariosPortoComponent,
-    VagaParaAjudanteDeCozinhaComponent
+    VagaParaAjudanteDeCozinhaComponent,
+    VagaDeCopeiroPortoComponent
   ],
   imports: [
     CommonModule,

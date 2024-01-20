@@ -1,1 +1,371 @@
-<p>vaga-de-copeiro-porto works!</p>
+<app-navbar-welcome></app-navbar-welcome>
+
+  <article>
+
+    <!--<section class="sidebar-section">
+
+      <div class="container">
+
+        <div class="menu">
+          <button >Applications</button>
+          <button >Projects</button>
+        </div>
+
+      </div>
+
+    </section>-->
+
+    <section class="form-section">
+
+
+      <div class="box-card">
+
+        <div class="form">
+
+          <form action="">
+
+            <div class="input-key-word">
+              <i class="fa-solid fa-search"></i>
+              <input type="text" (keyup)="onKeyUpCategory($event)" [disabled]="isUnchanged" placeholder="Category, Enter a key-word">
+
+              <div class="autocomplete-category" *ngIf="showCategories">
+                <span (click)="selectCategory(this.categoryToSearch)" >{{this.categoryToSearch}}</span>
+              </div>
+
+            </div>
+
+            <div class="input-city">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" (keyup)="onKeyUpCity($event)" placeholder="Select the city">
+
+              <div class="autocomplete-city" *ngIf="showCities">
+                <span (click)="selectCity(this.cityToSearch)" >{{this.cityToSearch}}</span>
+              </div>
+
+            </div>
+
+            <div class="buttons">
+              <button>Find offer </button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="jobs-found-section" *ngIf="showJobsFound">
+
+      <div class="container">
+
+        <article class="job-detail">
+
+          <div class="title">
+            <h1>{{ jobSelected.category ? jobSelected.category : "Category of Job" }}</h1>
+            <span id="comany"> <i class="fa-solid fa-star"> </i>{{ jobSelected.company ? jobSelected.company : "Company" }}</span>
+            <span id="location"><i class="fa-solid fa-location-dot"> </i>{{ jobSelected.location ? jobSelected.location : "Location" }}</span>
+            <button class="" (click)="applyCareer()">Apply now</button>
+          </div>
+
+          <div class="job-informations">
+            <h2> Offer data</h2>
+
+            <div class="small-items" *ngIf="jobSelected.period">
+              <h3><i class="fa-solid fa-business-time"></i> Offer type</h3>
+              <div>
+                <span *ngFor="let per of getPeriods(jobSelected.period ? jobSelected.period : '')">{{  per }} <i class="fa-solid fa-check"></i> </span>
+              </div>
+            </div>
+
+            <div class="small-items" *ngIf="jobSelected.shiftAndHours">
+              <h3><i class="fa-regular fa-clock"></i> Shift and Hour</h3>
+              <div>
+                <span *ngFor="let shift of getPeriods(jobSelected.shiftAndHours ? jobSelected.shiftAndHours : '')">{{  shift }} <i class="fa-solid fa-check"></i> </span>
+              </div>
+            </div>
+
+            <div class="small-items" *ngIf="jobSelected.salary">
+              <h3><i class="fa-solid fa-hand-holding-dollar"></i> Salary</h3>
+              <div>
+                <span *ngFor="let salary of getPeriods(jobSelected.salary ? jobSelected.salary : '')">
+                  <i class="fa-solid fa-euro-sign"></i>
+                  {{  salary }} <i class="fa-solid fa-check"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="small-items" *ngIf="jobSelected.jobType">
+              <h3><i class="fa-solid fa-house-laptop"></i> Job type</h3>
+              <div>
+                <span *ngFor="let jType of getPeriods(jobSelected.jobType ? jobSelected.jobType : '')">{{  jType }} <i class="fa-solid fa-check"></i> </span>
+              </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <h2>Full job description</h2>
+
+            <p *ngIf="jobSelected.companyDescription">
+              {{ jobSelected.companyDescription }}
+            </p>
+
+            <h3 *ngIf="jobSelected.tasks">What will be your mission?</h3>
+
+            <div id="jobs-tasks" *ngFor="let task of getPeriods(jobSelected.tasks ? jobSelected.tasks : '')">
+              <p *ngIf="task">
+                <i class="fa-solid fa-check-double"></i>
+                {{ task  }}
+              </p>
+            </div>
+
+            <h3 *ngIf="jobSelected.whyWorkAt">Why working with {{ jobSelected.company }}?</h3>
+
+            <div id="jobs-tasks" *ngFor="let why of getPeriods(jobSelected.whyWorkAt ? jobSelected.whyWorkAt : '')">
+              <p *ngIf="why">
+                <i class="fa-solid fa-check-double"></i>
+                {{ why  }}
+              </p>
+            </div>
+
+            <h3 *ngIf="jobSelected.requirements">Requirements. What we waiting from you?</h3>
+
+            <div id="jobs-tasks" *ngFor="let require of getPeriods(jobSelected.requirements ? jobSelected.requirements : '')">
+              <p *ngIf="require">
+                <i class="fa-solid fa-check-double"></i>
+                {{ require  }}
+              </p>
+            </div>
+
+            <h3 *ngIf="jobSelected.benefits">Benefits</h3>
+
+            <div id="jobs-tasks" *ngFor="let benefit of getPeriods(jobSelected.benefits ? jobSelected.benefits : '')">
+              <p *ngIf="benefit">
+                <i class="fa-solid fa-check-double"></i>
+                {{ benefit  }}
+              </p>
+            </div>
+
+
+            <div id="jobs-tasks" *ngFor="let obs of getPeriods(jobSelected.obs ? jobSelected.obs : '')">
+              <p *ngIf="obs">
+                <i class="fa-solid fa-check-double"></i>
+                {{ obs  }}
+              </p>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <h3 *ngIf="jobSelected.phone || jobSelected.email || jobSelected.url">Contacts</h3>
+            <div id="jobs-tasks" >
+
+              <p *ngIf="jobSelected.phone">
+                Phone number: <strong>{{ jobSelected.phone }}</strong>
+              </p>
+
+              <p *ngIf="jobSelected.email">
+                Email to send the CV: <strong>{{ jobSelected.email }}</strong>
+              </p>
+
+              <p>
+                <a *ngIf="jobSelected.url" href="{{jobSelected.url}}" target="_blank" class="url"><i class="fa-solid fa-link"></i> Access the company website</a>
+              </p>
+
+            </div>
+
+
+            <div class="apply-button" *ngIf="jobSelected.company">
+              <button class="" (click)="applyCareer()">Apply now</button>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="jobs-section">
+
+      <div class="box-card">
+
+        <div class="latest-jobs">
+
+          <div class="header">
+            <h2>Job Offers</h2>
+          </div>
+
+          <div class="box">
+
+            <a class="card" *ngFor="let item of jobs" [routerLink]="item.path + ''+ item.hashKey">
+
+              <div class="title">
+                <h1>{{ item.category}}</h1>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+
+              <div class="card-content">
+                <span class="company-name">{{ item.company}} <i class="fa fa-star"></i> </span>
+                <span class="location"> <i class="fa-solid fa-location-dot"></i> {{ item.location }}</span>
+                <div class="periods">
+                  <span id="period" *ngFor="let per of getPeriods(item.period)">{{  per }} <i class="fa-solid fa-check"></i> </span>
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <article class="job-detail">
+
+          <div class="title">
+            <h1>{{ jobSelected.category ? jobSelected.category : "Category of Job" }}</h1>
+            <span id="comany"> <i class="fa-solid fa-star"> </i>{{ jobSelected.company ? jobSelected.company : "Company" }}</span>
+            <span id="location"><i class="fa-solid fa-location-dot"> </i>{{ jobSelected.location ? jobSelected.location : "Location" }}</span>
+            <button class="" (click)="applyCareer()">Apply now</button>
+          </div>
+
+          <div class="job-informations">
+            <h2> Offer data</h2>
+
+            <div class="small-items" *ngIf="jobSelected.period">
+              <h3><i class="fa-solid fa-business-time"></i> Offer type</h3>
+              <div>
+                <span *ngFor="let per of getPeriods(jobSelected.period ? jobSelected.period : '')">{{  per }} <i class="fa-solid fa-check"></i> </span>
+              </div>
+            </div>
+
+            <div class="small-items" *ngIf="jobSelected.shiftAndHours">
+              <h3><i class="fa-regular fa-clock"></i> Shift and Hour</h3>
+              <div>
+                <span *ngFor="let shift of getPeriods(jobSelected.shiftAndHours ? jobSelected.shiftAndHours : '')">{{  shift }} <i class="fa-solid fa-check"></i> </span>
+              </div>
+            </div>
+
+            <div class="small-items" *ngIf="jobSelected.salary">
+              <h3><i class="fa-solid fa-hand-holding-dollar"></i> Salary</h3>
+              <div>
+                <span *ngFor="let salary of getPeriods(jobSelected.salary ? jobSelected.salary : '')">
+                  <i class="fa-solid fa-euro-sign"></i>
+                  {{  salary }} <i class="fa-solid fa-check"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="small-items" *ngIf="jobSelected.jobType">
+              <h3><i class="fa-solid fa-house-laptop"></i> Job type</h3>
+              <div>
+                <span *ngFor="let jType of getPeriods(jobSelected.jobType ? jobSelected.jobType : '')">{{  jType }} <i class="fa-solid fa-check"></i> </span>
+              </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <h2>Full job description</h2>
+
+            <p *ngIf="jobSelected.companyDescription">
+              {{ jobSelected.companyDescription }}
+            </p>
+
+            <h3 *ngIf="jobSelected.tasks">What will be your mission?</h3>
+
+            <div id="jobs-tasks" *ngFor="let task of getPeriods(jobSelected.tasks ? jobSelected.tasks : '')">
+              <p *ngIf="task">
+                <i class="fa-solid fa-check-double"></i>
+                {{ task  }}
+              </p>
+            </div>
+
+            <h3 *ngIf="jobSelected.whyWorkAt">Why working with {{ jobSelected.company }}?</h3>
+
+            <div id="jobs-tasks" *ngFor="let why of getPeriods(jobSelected.whyWorkAt ? jobSelected.whyWorkAt : '')">
+              <p *ngIf="why">
+                <i class="fa-solid fa-check-double"></i>
+                {{ why  }}
+              </p>
+            </div>
+
+            <h3 *ngIf="jobSelected.requirements">Requirements. What we waiting from you?</h3>
+
+            <div id="jobs-tasks" *ngFor="let require of getPeriods(jobSelected.requirements ? jobSelected.requirements : '')">
+              <p *ngIf="require">
+                <i class="fa-solid fa-check-double"></i>
+                {{ require  }}
+              </p>
+            </div>
+
+            <h3 *ngIf="jobSelected.benefits">Benefits</h3>
+
+            <div id="jobs-tasks" *ngFor="let benefit of getPeriods(jobSelected.benefits ? jobSelected.benefits : '')">
+              <p *ngIf="benefit">
+                <i class="fa-solid fa-check-double"></i>
+                {{ benefit  }}
+              </p>
+            </div>
+
+
+            <div id="jobs-tasks" *ngFor="let obs of getPeriods(jobSelected.obs ? jobSelected.obs : '')">
+              <p *ngIf="obs">
+                <i class="fa-solid fa-check-double"></i>
+                {{ obs  }}
+              </p>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <h3 *ngIf="jobSelected.phone || jobSelected.email || jobSelected.url">Contacts</h3>
+            <div id="jobs-tasks" >
+
+              <p *ngIf="jobSelected.phone">
+                Phone number: <strong>{{ jobSelected.phone }}</strong>
+              </p>
+
+              <p *ngIf="jobSelected.email">
+                Email to send the CV: <strong>{{ jobSelected.email }}</strong>
+              </p>
+
+              <p>
+                <a *ngIf="jobSelected.url" href="{{jobSelected.url}}" target="_blank" class="url"><i class="fa-solid fa-link"></i> Access the company website</a>
+              </p>
+
+            </div>
+
+
+            <div class="apply-button" *ngIf="jobSelected.company">
+              <button class="" (click)="applyCareer()" >Apply now</button>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="website-service-section">
+
+      <div class="container">
+
+        <div class="details">
+          <h2>Create your <span>Website</span> or <span>Application</span> with  us</h2>
+          <span>Transform your  intections in actions.</span>
+          <p>Shape your ideias with the iLED's team. Grow up with us and improve your business</p>
+        </div>
+
+        <div class="button">
+          <button class="btn-request">Request service <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </article>
+
+
+
+  <app-footer></app-footer>
