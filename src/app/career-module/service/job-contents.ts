@@ -78,6 +78,31 @@ export const job_contents: JobsList[] = [
       benefits: "Trabalho presencial",
       path: "/career/vaga-operador-de-inventarios-porto/"
     },
+    {
+      id: 3,
+      hashKey: 'e2522aa8b724bd649e6dd6a8d293ee3ecccbbce4',
+      category: "Vaga de Ajudante de Cozinha - Distrito do Porto",
+      company: "Restaurante em Hospital de São João",
+      location: "Porto-Portugal",
+      phone: "",
+      email: "recrutamentoaveiro@trianglerrhh.pt",
+      url: "",
+      shiftAndHours: "Período diário; 8 horas diário (8am-4h30pm/7am-3h30pm/11h30am-8h30pm)",
+      period: "Período integral, horário rotativo",
+      companyDescription: "Somos uma empresa que atua no ramo da Restauração, temos vários restaurantes espalhados pelo pais. Atuamos neste ramo a mais de 6 anos.",
+      tasks: "Precisamos pessoal para completar o nosso quadro ",
+      jobType: "Presencial",
+      whyWorkAt: "Formação de excelência;Acompanhamento por uma equipa de profissionais;Ferramentas inovadoras, com a última tecnologia digital;Remuneração atrativa e sem igual no mercado – de 70% até 100% da comissão de agência;Total flexibilidade de horário;Liberdade para escolher a zona de atuação;Plano de carreira, com a possibilidade de desenvolver uma equipa de consultores imobiliários",
+      requirements: "Motivation; Full and immediate availability; Dynamism and proactiveness.",
+      obs: "Paid traning if approved;",
+      salary: "Base salary",
+      createdAt: "20-01-2024",
+      updatedAt: "20-01-2024",
+      isActive: "1",
+      numberOfCandidates: 3,
+      benefits: "Trabalho presencial",
+      path: "/career/vaga-para-ajudante-de-cozinha-porto/"
+    },
 
   ];
 

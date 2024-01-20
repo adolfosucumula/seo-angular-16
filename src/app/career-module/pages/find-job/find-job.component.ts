@@ -53,7 +53,7 @@ export class FindJobComponent {
   }
 
   ngOnInit(): void{
-    generateHashDigest("vaga-operador-de-inventarios-porto").then((digest)=> {
+    generateHashDigest("vaga-para-ajudante-de-cozinha-porto").then((digest)=> {
       console.log(digest)
     })
 
@@ -74,6 +74,7 @@ export class FindJobComponent {
 
   openJob(jobSelected: any){
     this.jobSelected = jobSelected
+    alert(jobSelected)
   }
 
   getPeriods(period: string){
